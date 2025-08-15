@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Portföyüme Hoş Geldiniz",
+    "subtitle": "Uygulamalarımı ve projelerimi keşfedin",
+    "description": "Modern teknolojilerle geliştirilmiş mobil ve web uygulamalarımı içeren geliştirme çalışmalarımın bir vitrini."
+  },
+  "filters": {
+    "all": "Tümü",
+    "search": "Uygulama ara...",
+    "technologies": "Teknolojiler",
+    "categories": "Kategoriler",
+    "clearFilters": "Filtreleri Temizle"
+  },
+  "technologies": {
+    "react": "React",
+    "reactNative": "React Native",
+    "typescript": "TypeScript",
+    "javascript": "JavaScript",
+    "nodejs": "Node.js",
+    "reanimated": "Reanimated",
+    "gestureHandler": "Gesture Handler",
+    "expo": "Expo",
+    "nextjs": "Next.js",
+    "tailwind": "Tailwind CSS",
+    "firebase": "Firebase",
+    "supabase": "Supabase",
+    "mongodb": "MongoDB",
+    "postgresql": "PostgreSQL"
+  },
+  "categories": {
+    "mobile": "Mobil Uygulamalar",
+    "web": "Web Uygulamaları",
+    "fullstack": "Full Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ui": "UI/UX"
+  },
+  "app": {
+    "viewDetails": "Detayları Gör",
+    "liveDemo": "Canlı Demo",
+    "sourceCode": "Kaynak Kod",
+    "builtWith": "Kullanılan teknolojiler",
+    "features": "Özellikler",
+    "description": "Açıklama"
+  },
+  "theme": {
+    "light": "Açık",
+    "dark": "Koyu",
+    "toggle": "Temayı değiştir"
+  },
+  "language": {
+    "english": "English",
+    "turkish": "Türkçe",
+    "toggle": "Dil değiştir"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir şeyler yanlış gitti",
+    "retry": "Tekrar Dene",
+    "close": "Kapat",
+    "open": "Aç",
+    "save": "Kaydet",
+    "cancel": "İptal"
+  }
+}

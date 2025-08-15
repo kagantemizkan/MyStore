@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to My Portfolio",
+    "subtitle": "Discover my apps and projects",
+    "description": "A showcase of my development work, featuring mobile and web applications built with modern technologies."
+  },
+  "filters": {
+    "all": "All",
+    "search": "Search apps...",
+    "technologies": "Technologies",
+    "categories": "Categories",
+    "clearFilters": "Clear Filters"
+  },
+  "technologies": {
+    "react": "React",
+    "reactNative": "React Native",
+    "typescript": "TypeScript",
+    "javascript": "JavaScript",
+    "nodejs": "Node.js",
+    "reanimated": "Reanimated",
+    "gestureHandler": "Gesture Handler",
+    "expo": "Expo",
+    "nextjs": "Next.js",
+    "tailwind": "Tailwind CSS",
+    "firebase": "Firebase",
+    "supabase": "Supabase",
+    "mongodb": "MongoDB",
+    "postgresql": "PostgreSQL"
+  },
+  "categories": {
+    "mobile": "Mobile Apps",
+    "web": "Web Apps",
+    "fullstack": "Full Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ui": "UI/UX"
+  },
+  "app": {
+    "viewDetails": "View Details",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "builtWith": "Built with",
+    "features": "Features",
+    "description": "Description"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "english": "English",
+    "turkish": "Türkçe",
+    "toggle": "Change language"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "close": "Close",
+    "open": "Open",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}
