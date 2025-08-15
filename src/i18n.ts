@@ -12,6 +12,11 @@ export const resources = {
 			dark: "Dark",
 			language: "Language",
 			noResults: "No apps match the selected filters.",
+			back: "Back",
+			features: "Critical features",
+			screenshots: "Screenshots",
+			viewOnGithub: "View on GitHub",
+			appNotFound: "App not found",
 		},
 	},
 	tr: {
@@ -24,6 +29,11 @@ export const resources = {
 			dark: "Koyu",
 			language: "Dil",
 			noResults: "Seçilen filtrelerle eşleşen uygulama yok.",
+			back: "Geri",
+			features: "Kritik özellikler",
+			screenshots: "Ekran görüntüleri",
+			viewOnGithub: "GitHub'da görüntüle",
+			appNotFound: "Uygulama bulunamadı",
 		},
 	},
 } as const
