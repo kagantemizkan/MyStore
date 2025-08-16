@@ -9,6 +9,8 @@ import myPlantsLogo from "@/assets/apps/my-plants/my-plants-logo.png";
 
 export type Technology = "React" | "React Native" | "Reanimated" | "Gesture Handler" | "TypeScript";
 
+export type Category = "Game" | "Maps" | "Booking" | "Productivity" | "Notes" | "Lifestyle";
+
 export type Screenshot = {
   url: string;
   alt?: string;
@@ -26,6 +28,7 @@ export type AppItem = {
   screenshots?: Screenshot[];
   features?: string[];
   technologies: Technology[];
+  categories?: Category[];
   links?: { appStore?: string; playStore?: string; web?: string; github?: string };
 };
 
@@ -44,6 +47,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Offline-first storage", "Interactive charts", "Haptic feedback and gestures"],
     technologies: ["Reanimated", "Gesture Handler", "TypeScript"],
+    categories: ["Maps"],
     links: { github: "#" },
   },
   {
@@ -59,6 +63,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Session history", "Custom durations", "Animations"],
     technologies: ["Reanimated", "TypeScript"],
+    categories: ["Productivity"],
   },
   {
     id: "3",
@@ -73,6 +78,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Markdown preview", "Tag filtering", "Keyboard shortcuts"],
     technologies: ["React", "TypeScript"],
+    categories: ["Notes"],
     links: { web: "#", github: "#" },
   },
   {
@@ -88,6 +94,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Flight ticket booking", "Flight ticket search", "Flight ticket details"],
     technologies: ["TypeScript"],
+    categories: ["Booking"],
     links: { web: "#", github: "#" },
   },
   {
@@ -103,6 +110,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Word game", "Word search", "Word details"],
     technologies: ["TypeScript"],
+    categories: ["Game"],
     links: { web: "#", github: "#" },
   },
   {
@@ -118,6 +126,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Word game", "Word search", "Word details"],
     technologies: ["TypeScript"],
+    categories: ["Game"],
     links: { web: "#", github: "#" },
   },
   {
@@ -133,8 +142,10 @@ export const apps: AppItem[] = [
     ],
     features: ["Word game", "Word search", "Word details"],
     technologies: ["TypeScript"],
+    categories: ["Lifestyle"],
     links: { web: "#", github: "#" },
   },
 ];
 
 export const allTechnologies: Technology[] = ["React", "React Native", "Reanimated", "Gesture Handler", "TypeScript"];
+export const allCategories: Category[] = ["Maps", "Booking", "Game", "Productivity", "Notes", "Lifestyle"];
