@@ -12,7 +12,7 @@ export default function AppDetails() {
   if (!app) {
     return (
       <div className="space-y-6">
-        <RouterLink to="/" className="text-sm text-muted-foreground hover:underline">
+        <RouterLink to="/apps" className="text-sm text-muted-foreground hover:underline">
           {t("back")}
         </RouterLink>
         <p>{t("appNotFound")}</p>
@@ -33,7 +33,7 @@ export default function AppDetails() {
       </div>
 
       <div className="flex items-center gap-4">
-        <RouterLink to="/" className="text-sm text-muted-foreground hover:underline">
+        <RouterLink to="/apps" className="text-sm text-muted-foreground hover:underline">
           {t("back")}
         </RouterLink>
         {app.links?.github && (
