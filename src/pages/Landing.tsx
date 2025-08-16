@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import { useMemo } from "react";
+import { apps } from "@/data/apps";
+import { BentoGrid, BentoItem } from "@/components/BentoGrid";
 import AppStoreLogo from "@/components/AppStoreLogo";
 import DiamondAppLogos from "@/components/DiamondAppLogos";
 import AppBentoGrid from "@/components/AppBentoGrid";
@@ -25,6 +28,8 @@ export default function Landing() {
         </div>
       </section>
 
+
+
       <section className="space-y-8">
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-2">Featured Apps</h2>
@@ -35,3 +40,4 @@ export default function Landing() {
     </div>
   );
 }
+
