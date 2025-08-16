@@ -60,11 +60,26 @@ export default {
 					'0%, 100%': { boxShadow: '0 0 3px #F59E0B, 0 0 6px #D97706, 0 0 12px #F59E0B' },
 					'50%': { boxShadow: '0 0 6px #D97706, 0 0 9px #F59E0B, 0 0 20px #D97706' },
 				},				  
+				fadein: {
+					from: { opacity: '0' },
+					to: { opacity: '1' },
+				},
+				"fade-in-up": {
+					from: { opacity: '0', transform: 'translateY(12px)' },
+					to: { opacity: '1', transform: 'translateY(0)' },
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-6px)' },
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				"glow": "glow 8s ease-in-out infinite",
+				"fade-in": "fadein 700ms ease-out both",
+				"fade-in-up": "fade-in-up 700ms ease-out both",
+				"float": "float 6s ease-in-out infinite",
 			},
 		},
 	},
