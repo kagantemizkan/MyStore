@@ -8,6 +8,7 @@ import rnBirdLogo from "@/assets/apps/react-native-bird/rn-bird-logo.png";
 import myPlantsLogo from "@/assets/apps/my-plants/my-plants-logo.png";
 import numberMatchLogo from "@/assets/apps/number-match/number-match-logo.png";
 import umuttepeTourismLogo from "@/assets/apps/umuttepe-tourism/umuttepe-tourism-logo.png";
+import kouSyllabusLogo from "@/assets/apps/kou-syllabus/kou-syllabus-logo.png";
 
 export type Technology = "React" | "React Native" | "Reanimated" | "Gesture Handler" | "TypeScript" | "JavaScript" | "Python";
 
@@ -48,7 +49,7 @@ export const apps: AppItem[] = [
       { url: "https://via.placeholder.com/800x1600?text=Budget+3", alt: "Details" },
     ],
     features: ["Offline-first storage", "Interactive charts", "Haptic feedback and gestures"],
-    technologies: ["Reanimated", "Gesture Handler", "TypeScript"],
+    technologies: ["React Native"],
     categories: ["Maps"],
     links: { github: "#" },
   },
@@ -64,7 +65,7 @@ export const apps: AppItem[] = [
       { url: "https://via.placeholder.com/800x1600?text=Focus+2" },
     ],
     features: ["Session history", "Custom durations", "Animations"],
-    technologies: ["Reanimated", "TypeScript"],
+    technologies: ["React Native"],
     categories: ["Food"],
   },
   {
@@ -79,7 +80,7 @@ export const apps: AppItem[] = [
       { url: "https://via.placeholder.com/1200x800?text=Notes+2" },
     ],
     features: ["Markdown preview", "Tag filtering", "Keyboard shortcuts"],
-    technologies: ["React", "TypeScript"],
+    technologies: ["React Native"],
     categories: ["Education"],
     links: { web: "#", github: "#" },
   },
@@ -95,7 +96,7 @@ export const apps: AppItem[] = [
       { url: "https://via.placeholder.com/1200x800?text=Flight+Ticket+2" },
     ],
     features: ["Flight ticket booking", "Flight ticket search", "Flight ticket details"],
-    technologies: ["TypeScript"],
+    technologies: ["React Native"],
     categories: ["Booking"],
     links: { web: "#", github: "#" },
   },
@@ -111,7 +112,7 @@ export const apps: AppItem[] = [
       { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
     ],
     features: ["Word game", "Word search", "Word details"],
-    technologies: ["TypeScript"],
+    technologies: ["React Native"],
     categories: ["Game"],
     links: { web: "#", github: "#" },
   },
@@ -127,7 +128,7 @@ export const apps: AppItem[] = [
       { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
     ],
     features: ["Word game", "Word search", "Word details"],
-    technologies: ["TypeScript"],
+    technologies: ["React Native"],
     categories: ["Game"],
     links: { web: "#", github: "#" },
   },
@@ -143,7 +144,7 @@ export const apps: AppItem[] = [
       { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
     ],
     features: ["Word game", "Word search", "Word details"],
-    technologies: ["TypeScript"],
+    technologies: ["React Native"],
     categories: ["Lifestyle"],
     links: { web: "#", github: "#" },
   },
@@ -177,6 +178,22 @@ export const apps: AppItem[] = [
     features: ["Word game", "Word search", "Word details"],
     technologies: ["React", "JavaScript"],
     categories: ["Booking"],
+    links: { web: "#", github: "#" },
+  },
+  {
+    id: "10",
+    name: "KOU Syllabus",
+    description: "KOU Syllabus app.",
+    detailedDescription: "A syllabus app built with React Native and TypeScript.",
+    logoUrl: kouSyllabusLogo,
+    baseTech: "React",
+    screenshots: [
+      { url: "https://via.placeholder.com/1200x800?text=Word+Game+1" },
+      { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
+    ],
+    features: ["Word game", "Word search", "Word details"],
+    technologies: ["React"],
+    categories: ["Education"],
     links: { web: "#", github: "#" },
   },
 ];
