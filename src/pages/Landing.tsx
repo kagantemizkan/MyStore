@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import AppStoreLogo from "@/components/AppStoreLogo";
-import DiamondAppLogos from "@/components/DiamondAppLogos";
 import { apps } from "@/data/apps";
 import { useGitHubStats } from "@/hooks/useGitHubStats";
 import { MdArrowOutward } from "react-icons/md";
@@ -38,7 +37,6 @@ export default function Landing() {
 
   return (
     <div className="space-y-20">
-      <DiamondAppLogos />
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center space-y-5">
         <div className="flex flex-col items-center justify-center">
