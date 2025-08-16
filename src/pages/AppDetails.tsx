@@ -4,7 +4,6 @@ import { apps } from "@/data/apps";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FiArrowLeft } from "react-icons/fi";
-import MiniVideoPlayer from "@/components/MiniVideoPlayer";
 
 export default function AppDetails() {
   const { id } = useParams<{ id: string }>();
