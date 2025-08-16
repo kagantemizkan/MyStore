@@ -18,6 +18,8 @@ export const resources = {
       screenshots: "Screenshots",
       viewOnGithub: "View on GitHub",
       appNotFound: "App not found",
+      showPackageNames: "Show package names",
+      hidePackageNames: "Hide package names",
     },
   },
   tr: {
@@ -36,6 +38,8 @@ export const resources = {
       screenshots: "Ekran görüntüleri",
       viewOnGithub: "GitHub'da görüntüle",
       appNotFound: "Uygulama bulunamadı",
+      showPackageNames: "Paket adlarını göster",
+      hidePackageNames: "Paket adlarını gizle",
     },
   },
 } as const;

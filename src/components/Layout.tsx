@@ -15,7 +15,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen">
       <header className="sticky top-0 z-10 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b">
         <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
-          <Link to="/">
+          <Link className="cursor-pointer ml-[12px]" to="/">
             <img src={theme === "dark" ? logoTextWhite : logoTextBlack} alt="logo" className="w-36 object-contain scale-[1.2]" />
           </Link>
 

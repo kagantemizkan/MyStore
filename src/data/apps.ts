@@ -10,7 +10,15 @@ import numberMatchLogo from "@/assets/apps/number-match/number-match-logo.png";
 import umuttepeTourismLogo from "@/assets/apps/umuttepe-tourism/umuttepe-tourism-logo.png";
 import kouSyllabusLogo from "@/assets/apps/kou-syllabus/kou-syllabus-logo.png";
 
-export type Technology = "React" | "React Native" | "Reanimated" | "Gesture Handler" | "TypeScript" | "JavaScript" | "Python";
+export type Technology =
+  | "React"
+  | "React Native"
+  | "Reanimated"
+  | "Gesture Handler"
+  | "TypeScript"
+  | "JavaScript"
+  | "Python"
+  | "React Native Skia";
 
 export type Category = "Game" | "Maps" | "Booking" | "Food" | "Education" | "Lifestyle";
 
@@ -199,12 +207,13 @@ export const apps: AppItem[] = [
 ];
 
 export const allTechnologies: Technology[] = [
-  "React",
-  "React Native",
-  "Reanimated",
-  "Gesture Handler",
   "TypeScript",
   "JavaScript",
+  "React",
+  "React Native",
   "Python",
+  "Reanimated",
+  "Gesture Handler",
+  "React Native Skia",
 ];
 export const allCategories: Category[] = ["Maps", "Booking", "Game", "Food", "Education", "Lifestyle"];
