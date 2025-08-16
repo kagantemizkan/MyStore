@@ -40,11 +40,13 @@ export function AppCard({ app }: { app: AppItem }) {
                 Editörün Seçimi
               </Badge>
             )}
-            {app.technologies.map((t) => (
-              <Badge key={t} variant="secondary" className="flex-shrink-0">
-                {t}
-              </Badge>
-            ))}
+            {app.technologies
+              .filter((t) => t !== app.baseTech)
+              .map((t) => (
+                <Badge key={t} variant="secondary" className="flex-shrink-0">
+                  {t}
+                </Badge>
+              ))}
           </div>
         </CardContent>
       </Card>

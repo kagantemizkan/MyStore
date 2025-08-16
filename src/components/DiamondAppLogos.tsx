@@ -19,7 +19,7 @@ export default function DiamondAppLogos() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center gap-1 sm:gap-2 md:gap-4 lg:gap-6 mt-[-8rem] sm:mt-[-10rem] md:mt-[-14rem] lg:mt-[-17rem]">
+    <div className="flex justify-center items-center gap-1 sm:gap-2 md:gap-4 lg:gap-6 mt-[-8rem] sm:mt-[-10rem] md:mt-[-14rem] lg:mt-[-16rem]">
       {/* Column 1 - 1 logo */}
       <div className="flex flex-col justify-center items-center">
         {diamondApps.row1.map((app, index) => (
