@@ -12,34 +12,26 @@ interface SimpleBentoGridProps {
 export default function SimpleBentoGrid({ maxItems = 6, showStats = false }: SimpleBentoGridProps) {
   const displayApps = apps.slice(0, maxItems);
 
-  // Define different grid patterns based on number of items
-  const getGridPattern = (itemCount: number) => {
-    switch (itemCount) {
-      case 3:
-        return ["md:col-span-2", "md:col-span-1", "md:col-span-1"];
-      case 4:
-        return ["md:col-span-2", "md:col-span-1", "md:col-span-1", "md:col-span-2"];
-      case 5:
-        return ["md:col-span-2 md:row-span-2", "md:col-span-1", "md:col-span-1", "md:col-span-1", "md:col-span-1"];
-      case 6:
-      default:
-        return ["md:col-span-2 md:row-span-2", "md:col-span-1", "md:col-span-1", "md:col-span-1", "md:col-span-1", "md:col-span-2"];
-    }
-  };
-
-  const patterns = getGridPattern(displayApps.length);
+  const pattern: string[] = [
+    "lg:col-span-3 lg:row-span-2",
+    "lg:col-span-3",
+    "lg:col-span-2",
+    "lg:col-span-2",
+    "lg:col-span-2",
+    "lg:col-span-6",
+  ];
 
   return (
-    <BentoGrid className="grid-cols-1 md:grid-cols-3">
+    <BentoGrid className="lg:grid-cols-6">
       {displayApps.map((app, index) => (
         <BentoGridItem
           key={app.id}
-          className={`${patterns[index] || "md:col-span-1"} bg-card hover:bg-card/80 border-border group cursor-pointer`}
+          className={`${pattern[index] || "lg:col-span-2"} bg-card group cursor-pointer`}
           header={
             <Link to={`/app/${app.id}`} className="block">
               <div className="flex items-center justify-between mb-3">
                 <div className="relative">
-                  <div className="h-14 w-14 rounded-xl bg-muted overflow-hidden">
+                  <div className="h-14 w-14 rounded-xl bg-muted overflow-hidden border border-border/50">
                     <img src={app.logoUrl} alt={app.name + " logo"} className="h-full w-full object-contain p-2" />
                   </div>
                   {app.isEditorSelected && (
@@ -74,7 +66,7 @@ export default function SimpleBentoGrid({ maxItems = 6, showStats = false }: Sim
 
       {showStats && (
         <BentoGridItem
-          className="md:col-span-1 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20"
+          className="lg:col-span-2 bg-gradient-to-br from-primary/5 to-secondary/5"
           title="Portfolio"
           description="Active projects"
         >

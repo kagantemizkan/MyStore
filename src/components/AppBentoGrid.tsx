@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 const AppLogo = ({ app, size = "large" }: { app: AppItem; size?: "small" | "medium" | "large" }) => (
   <div
     className={cn(
-      "rounded-xl bg-muted/50 overflow-hidden flex items-center justify-center",
+      "rounded-xl bg-muted/50 overflow-hidden flex items-center justify-center border border-border/50",
       size === "small" && "h-12 w-12",
       size === "medium" && "h-16 w-16",
       size === "large" && "h-20 w-20"
@@ -21,14 +21,14 @@ const AppLogo = ({ app, size = "large" }: { app: AppItem; size?: "small" | "medi
 );
 
 const TechBadges = ({ technologies }: { technologies: string[] }) => (
-  <div className="flex gap-1 flex-wrap">
+  <div className="flex gap-1.5 flex-wrap">
     {technologies.slice(0, 3).map((tech) => (
-      <Badge key={tech} variant="secondary" className="text-xs">
+      <Badge key={tech} variant="secondary" className="text-[10px] px-1.5 py-0.5">
         {tech}
       </Badge>
     ))}
     {technologies.length > 3 && (
-      <Badge variant="outline" className="text-xs">
+      <Badge variant="outline" className="text-[10px] px-1.5 py-0.5">
         +{technologies.length - 3}
       </Badge>
     )}
@@ -41,23 +41,18 @@ const StatsCard = () => {
   const categories = [...new Set(apps.flatMap((app) => app.categories || []))].length;
 
   return (
-    <div className="space-y-4">
-      <div className="grid grid-cols-3 gap-3">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-primary">{totalApps}</div>
-          <div className="text-xs text-muted-foreground">Apps</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-primary">{technologies}</div>
-          <div className="text-xs text-muted-foreground">Techs</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-primary">{categories}</div>
-          <div className="text-xs text-muted-foreground">Categories</div>
-        </div>
+    <div className="grid grid-cols-3 gap-4">
+      <div className="text-center">
+        <div className="text-2xl font-semibold text-primary">{totalApps}</div>
+        <div className="text-xs text-muted-foreground">Apps</div>
       </div>
       <div className="text-center">
-        <div className="text-xs text-muted-foreground">Building the future, one app at a time</div>
+        <div className="text-2xl font-semibold text-primary">{technologies}</div>
+        <div className="text-xs text-muted-foreground">Techs</div>
+      </div>
+      <div className="text-center">
+        <div className="text-2xl font-semibold text-primary">{categories}</div>
+        <div className="text-xs text-muted-foreground">Categories</div>
       </div>
     </div>
   );
@@ -65,50 +60,45 @@ const StatsCard = () => {
 
 export default function AppBentoGrid() {
   const { t } = useTranslation();
-  const featuredApps = apps.slice(0, 6); // Get first 6 apps for bento layout
-  const editorPickApp = apps.find((app) => app.isEditorSelected);
+  const featuredApps = apps.slice(0, 6);
+  const editorPickApp = apps.find((app) => app.isEditorSelected) || featuredApps[0];
 
   return (
     <div className="w-full max-w-7xl mx-auto">
-      <BentoGrid className="grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4">
-        {/* Large featured app - spans 2 columns and 2 rows */}
+      <BentoGrid className="lg:grid-cols-6">
         <BentoGridItem
-          className="md:col-span-2 md:row-span-2 bg-gradient-to-br from-primary/10 to-primary/5 hover:from-primary/15 hover:to-primary/10 border border-primary/20"
+          className="lg:col-span-3 lg:row-span-2 bg-gradient-to-br from-primary/5 to-accent/5"
           header={
-            <Link to={`/app/${editorPickApp?.id || featuredApps[0].id}`} className="block">
+            <Link to={`/app/${editorPickApp.id}`} className="block">
               <div className="flex items-start justify-between">
-                <AppLogo app={editorPickApp || featuredApps[0]} size="large" />
-                {(editorPickApp?.isEditorSelected || featuredApps[0].isEditorSelected) && (
-                  <img src={CrownIcon} alt="Crown" className="h-8 w-8 object-contain" />
-                )}
+                <AppLogo app={editorPickApp} size="large" />
+                {editorPickApp.isEditorSelected && <img src={CrownIcon} alt="Crown" className="h-7 w-7 object-contain" />}
               </div>
             </Link>
           }
-          title={editorPickApp?.name || featuredApps[0].name}
-          description={editorPickApp?.description || featuredApps[0].description}
-        >
-          <div className="space-y-3 mt-3">
-            <TechBadges technologies={editorPickApp?.technologies || featuredApps[0].technologies} />
-            <Button asChild size="sm" className="w-full">
-              <Link to={`/app/${editorPickApp?.id || featuredApps[0].id}`}>View Details</Link>
-            </Button>
-          </div>
-        </BentoGridItem>
+          title={editorPickApp.name}
+          description={editorPickApp.description}
+          footer={
+            <div className="mt-2">
+              <TechBadges technologies={editorPickApp.technologies} />
+              <Button asChild size="sm" className="w-full mt-3">
+                <Link to={`/app/${editorPickApp.id}`}>View Details</Link>
+              </Button>
+            </div>
+          }
+        />
 
-        {/* Stats card */}
         <BentoGridItem
-          className="md:col-span-2 bg-gradient-to-br from-secondary/10 to-muted/20"
+          className="lg:col-span-3 bg-gradient-to-br from-secondary/10 to-muted/20"
           title="Portfolio Stats"
           description="My development journey in numbers"
-        >
-          <StatsCard />
-        </BentoGridItem>
+          footer={<StatsCard />}
+        />
 
-        {/* Medium app cards - 4 apps in single cells */}
         {featuredApps.slice(1, 5).map((app) => (
           <BentoGridItem
             key={app.id}
-            className="md:col-span-1 bg-card hover:bg-card/80 border-border"
+            className="lg:col-span-2 bg-card"
             header={
               <Link to={`/app/${app.id}`} className="block">
                 <div className="flex items-center justify-between mb-2">
@@ -119,35 +109,34 @@ export default function AppBentoGrid() {
             }
             title={app.name}
             description={app.description.length > 50 ? app.description.substring(0, 50) + "..." : app.description}
-          >
-            <div className="mt-3">
-              <TechBadges technologies={app.technologies} />
-            </div>
-          </BentoGridItem>
+            footer={<TechBadges technologies={app.technologies} />}
+          />
         ))}
 
-        {/* Wide call-to-action */}
         <BentoGridItem
-          className="md:col-span-2 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20"
+          className="lg:col-span-6 bg-gradient-to-r from-primary/10 to-accent/10"
           title="Explore All Apps"
           description="Discover more applications and projects in my portfolio"
-        >
-          <div className="space-y-3">
-            <div className="flex gap-2">
-              {apps.slice(0, 4).map((app) => (
-                <div key={app.id} className="h-8 w-8 rounded-md bg-muted overflow-hidden">
-                  <img src={app.logoUrl} alt={app.name} className="h-full w-full object-contain p-1" />
-                </div>
-              ))}
-              <div className="h-8 w-8 rounded-md bg-muted/50 flex items-center justify-center text-xs text-muted-foreground">
-                +{apps.length - 4}
+          footer={
+            <div className="space-y-3">
+              <div className="flex gap-2">
+                {apps.slice(0, 6).map((app) => (
+                  <div key={app.id} className="h-8 w-8 rounded-md bg-muted overflow-hidden">
+                    <img src={app.logoUrl} alt={app.name} className="h-full w-full object-contain p-1" />
+                  </div>
+                ))}
+                {apps.length > 6 && (
+                  <div className="h-8 w-8 rounded-md bg-muted/50 flex items-center justify-center text-xs text-muted-foreground">
+                    +{apps.length - 6}
+                  </div>
+                )}
               </div>
+              <Button asChild className="w-full">
+                <Link to="/apps">{t("exploreApps")}</Link>
+              </Button>
             </div>
-            <Button asChild className="w-full">
-              <Link to="/apps">{t("exploreApps")}</Link>
-            </Button>
-          </div>
-        </BentoGridItem>
+          }
+        />
       </BentoGrid>
     </div>
   );
