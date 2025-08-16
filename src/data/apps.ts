@@ -51,6 +51,7 @@ export const apps: AppItem[] = [
     detailedDescription: "A map app built with React Native and TypeScript.",
     logoUrl: rnMapsLogo,
     baseTech: "React Native",
+    isEditorSelected: true,
     screenshots: [
       { url: "https://via.placeholder.com/800x1600?text=Budget+1", alt: "Budget list" },
       { url: "https://via.placeholder.com/800x1600?text=Budget+2", alt: "Charts" },

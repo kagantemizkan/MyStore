@@ -21,7 +21,8 @@ export const resources = {
       showPackageNames: "Show package names",
       hidePackageNames: "Hide package names",
       heroTitle: "My App Store Portfolio",
-      heroSubtitle: "Explore my projects in an app store–like experience. Browse featured apps, filter by technology, and dive into details.",
+      heroSubtitle:
+        "Explore my projects in an app store–like experience. Browse featured apps, filter by technology, and dive into details.",
       exploreApps: "Explore apps",
       featured: "Featured",
       viewAllApps: "View all apps",
@@ -46,7 +47,8 @@ export const resources = {
       showPackageNames: "Paket adlarını göster",
       hidePackageNames: "Paket adlarını gizle",
       heroTitle: "Uygulama Mağazası Portföyüm",
-      heroSubtitle: "Projelerimi bir uygulama mağazası deneyimiyle keşfedin. Öne çıkanlara göz atın, teknolojiye göre filtreleyin ve detaylara dalın.",
+      heroSubtitle:
+        "Projelerimi bir uygulama mağazası deneyimiyle keşfedin. Öne çıkanlara göz atın, teknolojiye göre filtreleyin ve detaylara dalın.",
       exploreApps: "Uygulamaları keşfet",
       featured: "Öne çıkanlar",
       viewAllApps: "Tüm uygulamaları gör",

@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { useTheme } from "@/theme";
-import logoTextBlack from "@/assets/myapps-logo-black.png";
-import logoTextWhite from "@/assets/myapps-logo-white.png";
+import logoTextBlack from "@/assets/tote-bag-black.svg";
+import logoTextWhite from "@/assets/tote-bag-white.svg";
 import { Link } from "react-router-dom";
+import { Footer } from "@/components/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const { i18n } = useTranslation();
@@ -13,10 +14,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-10 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b">
-        <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
-          <Link className="cursor-pointer ml-[12px]" to="/">
-            <img src={theme === "dark" ? logoTextWhite : logoTextBlack} alt="logo" className="w-36 object-contain scale-[1.2]" />
+      <header className="sticky top-0 z-10 backdrop-blur supports-[backdrop-filter]:bg-background/90 border-b">
+        <div className="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between">
+          <Link className="cursor-pointer" to="/">
+            <img src={theme === "dark" ? logoTextWhite : logoTextBlack} alt="logo" className="w-16 object-contain" />
           </Link>
 
           <div className="flex items-center gap-4">
@@ -37,7 +38,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </header>
-      <main className="mx-auto max-w-7xl px-4 py-8">{children}</main>
+      <main className="mx-auto max-w-7xl px-4 py-8 flex-1">{children}</main>
+      <Footer />
     </div>
   );
 }
