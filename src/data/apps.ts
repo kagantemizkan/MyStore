@@ -6,8 +6,12 @@ import flightTicketLogo from "@/assets/apps/flight-ticket/flight-ticket-logo.png
 import wordGameLogo from "@/assets/apps/word-game/word-game-logo.png";
 import rnBirdLogo from "@/assets/apps/react-native-bird/rn-bird-logo.png";
 import myPlantsLogo from "@/assets/apps/my-plants/my-plants-logo.png";
+import numberMatchLogo from "@/assets/apps/number-match/number-match-logo.png";
+import umuttepeTourismLogo from "@/assets/apps/umuttepe-tourism/umuttepe-tourism-logo.png";
 
-export type Technology = "React" | "React Native" | "Reanimated" | "Gesture Handler" | "TypeScript";
+export type Technology = "React" | "React Native" | "Reanimated" | "Gesture Handler" | "TypeScript" | "JavaScript" | "Python";
+
+export type Category = "Game" | "Maps" | "Booking" | "Food" | "Education" | "Lifestyle";
 
 export type Screenshot = {
   url: string;
@@ -26,14 +30,15 @@ export type AppItem = {
   screenshots?: Screenshot[];
   features?: string[];
   technologies: Technology[];
+  categories?: Category[];
   links?: { appStore?: string; playStore?: string; web?: string; github?: string };
 };
 
 export const apps: AppItem[] = [
   {
     id: "1",
-    name: "React Native Maps",
-    description: "A map app built with React Native and TypeScript.",
+    name: "Maps",
+    description: "A map app built with React Native.",
     detailedDescription: "A map app built with React Native and TypeScript.",
     logoUrl: rnMapsLogo,
     baseTech: "React Native",
@@ -44,13 +49,14 @@ export const apps: AppItem[] = [
     ],
     features: ["Offline-first storage", "Interactive charts", "Haptic feedback and gestures"],
     technologies: ["Reanimated", "Gesture Handler", "TypeScript"],
+    categories: ["Maps"],
     links: { github: "#" },
   },
   {
     id: "2",
-    name: "Bilokma",
-    description: "Pomodoro timer with smooth interactions.",
-    detailedDescription: "A minimalist productivity timer with focus sessions and breaks, animations handled by Reanimated.",
+    name: "Bi'lokma",
+    description: "Food delivery app.",
+    detailedDescription: "A food delivery app built with React Native. Supports food delivery and food ordering.",
     logoUrl: bilokmaLogo,
     baseTech: "React Native",
     screenshots: [
@@ -59,12 +65,13 @@ export const apps: AppItem[] = [
     ],
     features: ["Session history", "Custom durations", "Animations"],
     technologies: ["Reanimated", "TypeScript"],
+    categories: ["Food"],
   },
   {
     id: "3",
-    name: "Koumath",
-    description: "Markdown notes with search and tags.",
-    detailedDescription: "A web note-taking app built with React and TypeScript. Supports markdown preview and fast search.",
+    name: "KOUmath",
+    description: "Math learning app.",
+    detailedDescription: "A math learning app built with React and TypeScript. Supports markdown preview and fast search.",
     logoUrl: koumathLogo,
     baseTech: "React Native",
     screenshots: [
@@ -73,6 +80,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Markdown preview", "Tag filtering", "Keyboard shortcuts"],
     technologies: ["React", "TypeScript"],
+    categories: ["Education"],
     links: { web: "#", github: "#" },
   },
   {
@@ -88,6 +96,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Flight ticket booking", "Flight ticket search", "Flight ticket details"],
     technologies: ["TypeScript"],
+    categories: ["Booking"],
     links: { web: "#", github: "#" },
   },
   {
@@ -103,6 +112,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Word game", "Word search", "Word details"],
     technologies: ["TypeScript"],
+    categories: ["Game"],
     links: { web: "#", github: "#" },
   },
   {
@@ -118,6 +128,7 @@ export const apps: AppItem[] = [
     ],
     features: ["Word game", "Word search", "Word details"],
     technologies: ["TypeScript"],
+    categories: ["Game"],
     links: { web: "#", github: "#" },
   },
   {
@@ -133,8 +144,50 @@ export const apps: AppItem[] = [
     ],
     features: ["Word game", "Word search", "Word details"],
     technologies: ["TypeScript"],
+    categories: ["Lifestyle"],
+    links: { web: "#", github: "#" },
+  },
+  {
+    id: "8",
+    name: "Number Match",
+    description: "Number match game app.",
+    detailedDescription: "A number match game app built with React Native and TypeScript.",
+    logoUrl: numberMatchLogo,
+    baseTech: "Python",
+    screenshots: [
+      { url: "https://via.placeholder.com/1200x800?text=Word+Game+1" },
+      { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
+    ],
+    features: ["Word game", "Word search", "Word details"],
+    technologies: ["Python"],
+    categories: ["Game"],
+    links: { web: "#", github: "#" },
+  },
+  {
+    id: "9",
+    name: "Umuttepe Tourism",
+    description: "Umuttepe Tourism app.",
+    detailedDescription: "A tourism app built with React Native and TypeScript.",
+    logoUrl: umuttepeTourismLogo,
+    baseTech: "React",
+    screenshots: [
+      { url: "https://via.placeholder.com/1200x800?text=Word+Game+1" },
+      { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
+    ],
+    features: ["Word game", "Word search", "Word details"],
+    technologies: ["React", "JavaScript"],
+    categories: ["Booking"],
     links: { web: "#", github: "#" },
   },
 ];
 
-export const allTechnologies: Technology[] = ["React", "React Native", "Reanimated", "Gesture Handler", "TypeScript"];
+export const allTechnologies: Technology[] = [
+  "React",
+  "React Native",
+  "Reanimated",
+  "Gesture Handler",
+  "TypeScript",
+  "JavaScript",
+  "Python",
+];
+export const allCategories: Category[] = ["Maps", "Booking", "Game", "Food", "Education", "Lifestyle"];
