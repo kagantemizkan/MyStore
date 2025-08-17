@@ -61,8 +61,8 @@ export default function Home() {
   }
 
   return (
-    <div className="grid gap-8 lg:grid-cols-12">
-      <div className="lg:col-span-3">
+    <div className="grid gap-4 sm:gap-6 lg:gap-8 grid-cols-1 lg:grid-cols-12">
+      <div className="lg:col-span-3 ">
         <SidebarFilters
           selectedCategories={selectedCategories}
           onToggleCategory={toggleCategory}
@@ -72,21 +72,23 @@ export default function Home() {
         />
       </div>
 
-      <div className="lg:col-span-9">
+      <div className="lg:col-span-9 order-1 lg:order-2">
         {filtered.length === 0 ? (
-          <section className="pt-6">
-            <p className="text-muted-foreground">{t("noResults")}</p>
+          <section className="pt-4 sm:pt-6">
+            <p className="text-muted-foreground text-center sm:text-left">{t("noResults")}</p>
           </section>
         ) : (
           Object.entries(groupedApps).map(([baseTech, appsInGroup]) => (
-            <section key={baseTech} className="pt-6 space-y-4">
-              <div className="flex items-center gap-3">
-                {baseTech === "React Native" && <img src={ReactNativeLogo} alt="React Native" className="w-9 h-9 object-contain" />}
-                {baseTech === "React" && <img src={ReactNativeLogo} alt="React Native" className="w-9 h-9 object-contain" />}
-                {baseTech === "Python" && <img src={PythonLogo} alt="Python" className="w-9 h-9 object-contain" />}
-                <h3 className="text-[1.9rem] font-semibold text-foreground">{baseTech}</h3>
+            <section key={baseTech} className="pt-4 sm:pt-6 space-y-3 sm:space-y-4">
+              <div className="flex items-center gap-2 sm:gap-3">
+                {baseTech === "React Native" && (
+                  <img src={ReactNativeLogo} alt="React Native" className="w-7 h-7 sm:w-9 sm:h-9 object-contain" />
+                )}
+                {baseTech === "React" && <img src={ReactNativeLogo} alt="React Native" className="w-7 h-7 sm:w-9 sm:h-9 object-contain" />}
+                {baseTech === "Python" && <img src={PythonLogo} alt="Python" className="w-7 h-7 sm:w-9 sm:h-9 object-contain" />}
+                <h3 className="text-xl sm:text-2xl lg:text-[1.9rem] font-semibold text-foreground">{baseTech}</h3>
               </div>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {appsInGroup.map((item) => (
                   <AppCard key={item.id} app={item} />
                 ))}
