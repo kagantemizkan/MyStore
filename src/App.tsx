@@ -5,6 +5,7 @@ import Landing from "@/pages/Landing";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { setupThemeListener } from "@/lib/utils";
+import Attribution from "./pages/Attribution";
 
 function App() {
   // Set up favicon switching based on browser theme
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/apps" element={<Home />} />
           <Route path="/app/:id" element={<AppDetails />} />
+          <Route path="/attribution" element={<Attribution />} />
         </Routes>
       </Layout>
     </BrowserRouter>

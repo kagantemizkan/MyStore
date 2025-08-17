@@ -49,7 +49,7 @@ export default function Landing() {
             <AppStoreLogo />
           </div>
           <h1 className="mx-auto max-w-3xl bg-gradient-to-r from-primary to-foreground/70 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent md:text-5xl animate-fade-in-up">
-            My Apps
+            My Store
           </h1>
           <p
             className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl animate-fade-in-up"
