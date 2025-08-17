@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { allCategories, allTechnologies, type Category, type Technology } from "@/data/apps";
+import { allCategories, allTechnologies, type Category, type Technology, techToPackageName } from "@/data/apps";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { FaListUl } from "react-icons/fa6";
+import { FaListUl, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { useTheme } from "@/theme";
 import tsIcon from "@/assets/techs/typescript.svg";
 import rnIcon from "@/assets/techs/react-native.png";
@@ -14,6 +14,11 @@ import reactIcon from "@/assets/react.svg";
 import jsIcon from "@/assets/techs/javascript.png";
 import pythonIcon from "@/assets/techs/python.png";
 import skiaIcon from "@/assets/techs/react-native-skia.png";
+import expoIcon from "@/assets/techs/expo.svg";
+import nativewindIcon from "@/assets/techs/nativewind.svg";
+import paperIcon from "@/assets/techs/react-native-paper.svg";
+import zustandIcon from "@/assets/techs/zustand.svg";
+import jotaiIcon from "@/assets/techs/jotai.png";
 
 type Props = {
   selectedCategories: Set<Category>;
@@ -32,23 +37,18 @@ const techToIcon: Partial<Record<Technology, string>> = {
   React: reactIcon,
   Python: pythonIcon,
   "React Native Skia": skiaIcon,
-};
-
-const techToPackageName: Partial<Record<Technology, string>> = {
-  TypeScript: "typescript",
-  JavaScript: "javascript",
-  "React Native": "react-native",
-  Reanimated: "react-native-reanimated",
-  "Gesture Handler": "react-native-gesture-handler",
-  React: "react",
-  Python: "python",
-  "React Native Skia": "@shopify/react-native-skia",
+  Expo: expoIcon,
+  NativeWind: nativewindIcon,
+  "React Native Paper": paperIcon,
+  Zustand: zustandIcon,
+  Jotai: jotaiIcon,
 };
 
 export function SidebarFilters({ selectedCategories, onToggleCategory, selectedTech, onToggleTech, onClearAll }: Props) {
   const { t } = useTranslation();
   const { theme } = useTheme();
   const [showPackageNames, setShowPackageNames] = useState(false);
+  const [expandedTech, setExpandedTech] = useState(false);
 
   return (
     <aside className="rounded-lg border p-4 lg:sticky lg:top-24 h-fit">
@@ -90,7 +90,7 @@ export function SidebarFilters({ selectedCategories, onToggleCategory, selectedT
             </h3>
           </div>
           <ul className="space-y-2">
-            {allTechnologies.map((tech) => {
+            {(expandedTech ? allTechnologies : allTechnologies.slice(0, 8)).map((tech) => {
               const checked = selectedTech.has(tech);
               const iconSrc = techToIcon[tech];
               const displayName = showPackageNames ? techToPackageName[tech] || tech : tech;
@@ -102,7 +102,9 @@ export function SidebarFilters({ selectedCategories, onToggleCategory, selectedT
                       src={iconSrc}
                       alt=""
                       aria-hidden
-                      className={`h-4 w-4 ${theme === "light" && (iconSrc === gestureIcon || iconSrc === reanimatedIcon) ? "invert" : ""}`}
+                      className={`h-4 w-4 ${
+                        theme === "light" && (iconSrc === gestureIcon || iconSrc === reanimatedIcon || iconSrc === expoIcon) ? "invert" : ""
+                      }`}
                     />
                   )}
                   <Label htmlFor={`tech-${tech}`} className={`text-sm cursor-pointer ${showPackageNames ? "font-mono" : ""}`}>
@@ -112,6 +114,24 @@ export function SidebarFilters({ selectedCategories, onToggleCategory, selectedT
               );
             })}
           </ul>
+          {allTechnologies.length > 8 && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setExpandedTech(!expandedTech)}
+              className="w-full mt-2 flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground"
+            >
+              {expandedTech ? (
+                <>
+                  Show Less <FaChevronUp className="h-3 w-3" />
+                </>
+              ) : (
+                <>
+                  Show More ({allTechnologies.length - 8}) <FaChevronDown className="h-3 w-3" />
+                </>
+              )}
+            </Button>
+          )}
         </section>
       </div>
     </aside>

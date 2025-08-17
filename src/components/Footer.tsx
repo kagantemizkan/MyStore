@@ -9,8 +9,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-6">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="text-center md:text-left">
-            <p className="text-sm text-muted-foreground">© 2025 My Apps. All rights reserved.</p>
-            <p className="text-xs text-muted-foreground mt-1">Built with React, TypeScript & Tailwind CSS</p>
+            <p className="text-xs text-muted-foreground mt-1">Kağan Temizkan</p>
           </div>
 
           <div className="flex items-center gap-4">

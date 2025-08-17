@@ -63,7 +63,7 @@ export default function MiniVideoPlayer({ src, className = "", autoPlay = false,
       <video
         ref={videoRef}
         src={src}
-        className="w-full h-full object-contain bg-black/5 border border-red-500"
+        className="w-full h-full object-contain bg-black/5"
         autoPlay={autoPlay}
         muted={muted}
         loop={loop}

@@ -3,8 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import type { AppItem } from "@/data/apps";
 import { Link } from "react-router-dom";
 import CrownIcon from "@/assets/crown.svg";
+import { useTranslation } from "react-i18next";
 
 export function AppCard({ app }: { app: AppItem }) {
+  const { t } = useTranslation();
   return (
     <Link
       to={`/app/${app.id}`}
@@ -36,8 +38,11 @@ export function AppCard({ app }: { app: AppItem }) {
         <CardContent className="pt-0 flex-1 flex flex-col justify-end">
           <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
             {app.isEditorSelected && (
-              <Badge variant="default" className="flex-shrink-0 bg-yellow-900 text-yellow-300 font-semibold whitespace-nowrap">
-                Editörün Seçimi
+              <Badge
+                variant="default"
+                className="flex-shrink-0 bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-800/50 font-semibold whitespace-nowrap"
+              >
+                {t("editorSelection")}
               </Badge>
             )}
             {app.technologies

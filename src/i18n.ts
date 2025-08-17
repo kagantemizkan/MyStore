@@ -26,6 +26,7 @@ export const resources = {
       exploreApps: "Explore apps",
       featured: "Featured",
       viewAllApps: "View all apps",
+      editorSelection: "Editor's Selection",
     },
   },
   tr: {
@@ -52,6 +53,7 @@ export const resources = {
       exploreApps: "Uygulamaları keşfet",
       featured: "Öne çıkanlar",
       viewAllApps: "Tüm uygulamaları gör",
+      editorSelection: "Editörün Seçimi",
     },
   },
 } as const;

@@ -1,3 +1,25 @@
+// IMAGES
+import rnMapsImage from "@/assets/apps/react-native-maps/rn-maps-settings.png";
+
+import flightTicketImage1 from "@/assets/apps/flight-ticket/S1.png";
+import flightTicketImage2 from "@/assets/apps/flight-ticket/S2.png";
+
+import wordGameImage1 from "@/assets/apps/word-game/1.png";
+import wordGameImage2 from "@/assets/apps/word-game/2.png";
+import wordGameImage3 from "@/assets/apps/word-game/3.png";
+import wordGameImage4 from "@/assets/apps/word-game/4.png";
+import wordGameImage5 from "@/assets/apps/word-game/5.png";
+import wordGameImage6 from "@/assets/apps/word-game/6.png";
+import wordGameImage7 from "@/assets/apps/word-game/7.png";
+import wordGameImage8 from "@/assets/apps/word-game/8.png";
+import wordGameImage9 from "@/assets/apps/word-game/9.png";
+
+import myPlantsImage1 from "@/assets/apps/my-plants/1.png";
+import myPlantsImage2 from "@/assets/apps/my-plants/2.png";
+import myPlantsImage3 from "@/assets/apps/my-plants/3.png";
+import myPlantsImage4 from "@/assets/apps/my-plants/4.png";
+import myPlantsImage5 from "@/assets/apps/my-plants/5.png";
+
 // LOGOS
 import rnMapsLogo from "@/assets/apps/react-native-maps/rn-maps-logo.png";
 import bilokmaLogo from "@/assets/apps/bilokma/bilokma-logo.png";
@@ -11,7 +33,9 @@ import umuttepeTourismLogo from "@/assets/apps/umuttepe-tourism/umuttepe-tourism
 import kouSyllabusLogo from "@/assets/apps/kou-syllabus/kou-syllabus-logo.png";
 
 // VIDEOS
-// import koumathVideo from "@/assets/apps/koumath/koumath-video.mp4";
+import koumathVideo from "@/assets/apps/koumath/koumath-video.mov";
+import rnMapsVideo from "@/assets/apps/react-native-maps/rn-maps.webm";
+import flightTicketVideo from "@/assets/apps/flight-ticket/flight-app-video.mp4";
 
 export type Technology =
   | "React"
@@ -22,7 +46,47 @@ export type Technology =
   | "JavaScript"
   | "Python"
   | "React Native Skia"
-  | "Expo";
+  | "Expo"
+  | "NativeWind"
+  | "React Native Paper"
+  | "Zustand"
+  | "Jotai"
+  | "React Native Maps";
+
+export const allTechnologies: Technology[] = [
+  "TypeScript",
+  "JavaScript",
+  "React",
+  "React Native",
+  "Python",
+  "Reanimated",
+  "Gesture Handler",
+  "React Native Skia",
+  "Expo",
+  "NativeWind",
+  "React Native Paper",
+  "Zustand",
+  "Jotai",
+  "React Native Maps",
+];
+export const allCategories: Category[] = ["Maps", "Booking", "Game", "Food", "Education", "Lifestyle"];
+
+export const techToPackageName: Partial<Record<Technology, string>> = {
+  TypeScript: "typescript",
+  JavaScript: "javascript",
+  "React Native": "react-native",
+  Reanimated: "react-native-reanimated",
+  "Gesture Handler": "react-native-gesture-handler",
+  React: "react",
+  Python: "python",
+  "React Native Skia": "@shopify/react-native-skia",
+  Expo: "expo",
+  NativeWind: "nativewind",
+  "React Native Paper": "react-native-paper",
+  Zustand: "zustand",
+  Jotai: "jotai",
+  "React Native Maps": "react-native-maps",
+};
 
 export type Category = "Game" | "Maps" | "Booking" | "Food" | "Education" | "Lifestyle";
 
@@ -53,43 +117,37 @@ export const apps: AppItem[] = [
     id: "1",
     name: "Maps",
     description: "A map app built with React Native.",
-    detailedDescription: "A map app built with React Native and TypeScript.",
+    detailedDescription:
+      "This project is a Google Maps clone that focuses on core navigation features. It provides step-by-step directions between locations with visual and voice guidance options. Users can choose different themes, including a black light theme, and select their preferred language for navigation instructions. The app also supports voice search for hands-free location queries.",
     logoUrl: rnMapsLogo,
     baseTech: "React Native",
     isEditorSelected: true,
+    videoUrl: rnMapsVideo,
     screenshots: [
-      { url: "https://via.placeholder.com/800x1600?text=Budget+1", alt: "Budget list" },
-      { url: "https://via.placeholder.com/800x1600?text=Budget+2", alt: "Charts" },
-      { url: "https://via.placeholder.com/800x1600?text=Budget+3", alt: "Details" },
+      { url: "https://github.com/kagantemizkan/mapsForBlinds/assets/46727689/64543788-bc8f-41dc-bc34-aaaae7ab022a" },
+      { url: "https://github.com/kagantemizkan/RNmaps/assets/46727689/3db80b35-d9ff-4dea-ba6d-ae89acb4e1fb" },
+      { url: rnMapsImage },
     ],
-    features: ["Offline-first storage", "Interactive charts", "Haptic feedback and gestures"],
-    technologies: ["React Native"],
+    features: [
+      "<b>Turkish & English support</b>",
+      "<b>Step-by-step directions</b>",
+      "<b>Theme Selection</b> ",
+      "<b>Voice search</b> ",
+      "<b>Information about the places</b> ",
+    ],
+    technologies: ["React Native", "JavaScript", "Jotai", "React Native Paper", "Gesture Handler", "Reanimated"],
     categories: ["Maps"],
-    links: { github: "#" },
+    links: { github: "https://github.com/kagantemizkan/RNmaps" },
   },
   {
     id: "2",
-    name: "Bi'lokma",
-    description: "Food delivery app.",
-    detailedDescription: "A food delivery app built with React Native. Supports food delivery and food ordering.",
-    logoUrl: bilokmaLogo,
-    baseTech: "React Native",
-    screenshots: [
-      { url: "https://via.placeholder.com/800x1600?text=Focus+1" },
-      { url: "https://via.placeholder.com/800x1600?text=Focus+2" },
-    ],
-    features: ["Session history", "Custom durations", "Animations"],
-    technologies: ["React Native"],
-    categories: ["Food"],
-  },
-  {
-    id: "3",
     name: "KOUmath",
     description: "AI math solver app.",
     detailedDescription:
       "This project is a Photomath inspired app that crops the selected area and send it to the backend that handels the all the logic for solving the math problem. It provides camera recognition to analyze handwritten mathematical equations and expressions, manual input capabilities, and interactive graphing features for comprehensive mathematical problem solving.",
     logoUrl: koumathLogo,
     baseTech: "React Native",
+    videoUrl: koumathVideo,
     isEditorSelected: true,
     screenshots: [
       { url: "https://github.com/user-attachments/assets/63aa9796-cc61-4b10-a4ff-f4519be8227d", alt: "S1" },
@@ -114,127 +172,160 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/koumath" },
   },
   {
+    id: "3",
+    name: "Bi'lokma",
+    description: "An application developed to prevent food waste.",
+    detailedDescription:
+      "This project is a React Native mobile application developed during the Google Developer Student Community Hackathon. It aims to reduce food waste by facilitating communication between bakeries and users who are interested in purchasing leftover items late at night.",
+    logoUrl: bilokmaLogo,
+    baseTech: "React Native",
+    screenshots: [
+      { url: "https://github.com/kagantemizkan/bilokma/assets/46727689/19b46d3f-bea8-4b58-9fa3-13c6694ac2e9" },
+      { url: "https://github.com/kagantemizkan/bilokma/assets/46727689/870df9bd-1348-4d96-9fdd-f8dd7f51d62b" },
+      { url: "https://github.com/kagantemizkan/bilokma/assets/46727689/4bc2206c-9635-4a62-9b14-8600693e9de2" },
+      { url: "https://github.com/kagantemizkan/bilokma/assets/46727689/ee586ca1-7720-41a4-8931-fc0b1de5e52a" },
+      { url: "https://github.com/kagantemizkan/bilokma/assets/46727689/bbdf7467-6df4-48d0-8668-10bc38b5c8f4" },
+      { url: "https://github.com/kagantemizkan/bilokma/assets/46727689/339ee989-4552-40ea-b99b-a5ff08b8b95a" },
+      { url: "https://github.com/kagantemizkan/bilokma/assets/46727689/ec424808-429f-4bd7-9289-c06bb55247ce" },
+      { url: "https://github.com/kagantemizkan/bilokma/assets/46727689/7747c1ad-5ab5-402b-af14-a7382762ab67" },
+      { url: "https://github.com/kagantemizkan/bilokma/assets/46727689/c693a304-eafd-400f-9323-d418ac290fec" },
+    ],
+    features: [
+      "User authentication",
+      "Real-time notifications for available leftover items",
+      "Geolocation services to view bakery locations",
+      "Search functionality for specific items",
+    ],
+    technologies: ["React Native", "Expo", "NativeWind", "JavaScript"],
+    categories: ["Food"],
+    links: { github: "https://github.com/kagantemizkan/bilokma" },
+  },
+  {
     id: "4",
     name: "Flight Ticket",
     description: "Flight ticket booking app.",
-    detailedDescription: "A flight ticket booking app built with React and TypeScript.",
+    detailedDescription: "A basic flight ticket app that generates random tickets and removes them.",
     logoUrl: flightTicketLogo,
     baseTech: "React Native",
-    screenshots: [
-      { url: "https://via.placeholder.com/1200x800?text=Flight+Ticket+1" },
-      { url: "https://via.placeholder.com/1200x800?text=Flight+Ticket+2" },
+    videoUrl: flightTicketVideo,
+    screenshots: [{ url: flightTicketImage1 }, { url: flightTicketImage2 }],
+    features: [
+      "<b>Smooth Animations:</b> Enhanced with Reanimated for a fluid user experience.",
+      "<b>Dynamic Ticket View:</b> Utilizes react-native-svg for an interactive ticket display.",
     ],
-    features: ["Flight ticket booking", "Flight ticket search", "Flight ticket details"],
-    technologies: ["React Native"],
+    technologies: ["React Native", "Expo", "Gesture Handler", "Reanimated", "JavaScript"],
     categories: ["Booking"],
-    links: { web: "#", github: "#" },
+    links: { github: "https://github.com/kagantemizkan/flightTicketApp" },
   },
   {
     id: "5",
     name: "Word Game",
     description: "Word game app.",
-    detailedDescription: "A word game app built with Vue and TypeScript.",
+    detailedDescription:
+      "This project is a tutorial from <a href='https://www.youtube.com/watch?v=pTonpjmKtiE&ab_channel=SimonGrimm' target='_blank' rel='noopener noreferrer' class='text-blue-600 hover:text-blue-800 underline'>Simon Grimm's YouTube channel</a>. Go check him out! <br /> <br /> Additionally, I added a few features to the original project like localizations.",
     logoUrl: wordGameLogo,
     baseTech: "React Native",
     screenshots: [
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+1" },
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
+      { url: wordGameImage1 },
+      { url: wordGameImage2 },
+      { url: wordGameImage3 },
+      { url: wordGameImage4 },
+      { url: wordGameImage5 },
+      { url: wordGameImage6 },
+      { url: wordGameImage7 },
+      { url: wordGameImage8 },
+      { url: wordGameImage9 },
     ],
-    features: ["Word game", "Word search", "Word details"],
-    technologies: ["React Native"],
+    features: ["English & Turkish Support", "Custom Keyboard"],
+    technologies: ["React Native", "TypeScript", "Reanimated", "Gesture Handler", "Expo"],
     categories: ["Game"],
-    links: { web: "#", github: "#" },
+    links: { github: "https://github.com/kagantemizkan/worldle" },
   },
   {
     id: "6",
     name: "Flappy Bird",
     description: "Bird game app.",
-    detailedDescription: "A bird game app built with React Native and TypeScript.",
+    detailedDescription:
+      "This project is a tutorial from <a href='https://www.youtube.com/watch?v=9F4aICEisVI' target='_blank' rel='noopener noreferrer' class='text-blue-600 hover:text-blue-800 underline'>notJust․dev's YouTube channel</a>. Go check him out! <br /> <br /> Additionally, I added a few features to the original project like score tracking, night and day cycle, and sound effects.",
     logoUrl: rnBirdLogo,
     baseTech: "React Native",
+    videoUrl: "https://github.com/kagantemizkan/RNflappyBird/assets/46727689/07ccfb07-f06b-432c-b083-02cca6d238d2",
     screenshots: [
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+1" },
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
+      { url: "https://github.com/kagantemizkan/RNflappyBird/assets/46727689/1479894d-02eb-4f84-9851-3f3758e41d38" },
+      { url: "https://github.com/kagantemizkan/RNflappyBird/assets/46727689/75a7d35b-e761-421c-8f0e-6f8012dbc0eb" },
     ],
-    features: ["Word game", "Word search", "Word details"],
-    technologies: ["React Native"],
+    features: [
+      "<b>Day-Night Cycle: </b>The background switches between day and night every 3 points.",
+      "<b>Sound Effects: </b>Includes wing flapping, hitting, and point scoring sounds.",
+      "<b>Collision Detection: </b>The game ends if the bird hits the pipes or the ground or pipes.",
+    ],
+    technologies: ["React Native", "React Native Skia", "Reanimated", "Gesture Handler", "Expo", "JavaScript"],
     categories: ["Game"],
-    links: { web: "#", github: "#" },
+    links: { github: "https://github.com/kagantemizkan/RNflappyBird" },
   },
   {
     id: "7",
     name: "My Plants",
-    description: "My Plants app.",
-    detailedDescription: "A plants app built with React Native and TypeScript.",
+    description: "Auto plant watering & schedule app.",
+    detailedDescription:
+      "The app is connected to a aurdino that controls the water pump and the lights with moisture sensors. It also has a schedule feature that allows you to set a time to water your plants.",
     logoUrl: myPlantsLogo,
     baseTech: "React Native",
     screenshots: [
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+1" },
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
+      { url: myPlantsImage1 },
+      { url: myPlantsImage2 },
+      { url: myPlantsImage3 },
+      { url: myPlantsImage4 },
+      { url: myPlantsImage5 },
     ],
-    features: ["Word game", "Word search", "Word details"],
-    technologies: ["React Native"],
+    features: ["Auto Plant Watering", "Schedule Feature", "Moisture Sensor Integration"],
+    technologies: ["React Native", "Expo", "JavaScript"],
     categories: ["Lifestyle"],
-    links: { web: "#", github: "#" },
+    links: { github: "https://github.com/kagantemizkan/MyPlants" },
   },
   {
     id: "8",
     name: "Number Match",
     description: "Number match game app.",
-    detailedDescription: "A number match game app built with React Native and TypeScript.",
+    detailedDescription:
+      "This is a simple number matching game in Python. The goal of the game is to find adjacent numbers on the board and match them. The higher the value of the matched numbers, the more points the player wins.",
     logoUrl: numberMatchLogo,
     baseTech: "Python",
     screenshots: [
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+1" },
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
+      { url: "https://github.com/kagantemizkan/python-number-matching/assets/46727689/99b298c0-f60a-4a91-9fb9-53910a315615" },
+      { url: "https://github.com/kagantemizkan/python-number-matching/assets/46727689/fe724e82-313b-4fbc-a356-cf53715b7e04" },
+      { url: "https://github.com/kagantemizkan/python-number-matching/assets/46727689/b05b74f2-76d5-403d-a330-39c8fa281b81" },
+      { url: "https://github.com/kagantemizkan/python-number-matching/assets/46727689/e34738d7-3300-42d4-a1d1-9e8030418e8f" },
     ],
-    features: ["Word game", "Word search", "Word details"],
+    features: ["Number Matching", "Score Tracking", "Colored Console"],
     technologies: ["Python"],
     categories: ["Game"],
-    links: { web: "#", github: "#" },
+    links: { github: "https://github.com/kagantemizkan/python-number-matching" },
   },
   {
     id: "9",
     name: "Umuttepe Tourism",
     description: "Umuttepe Tourism app.",
-    detailedDescription: "A tourism app built with React Native and TypeScript.",
+    detailedDescription:
+      "A bus ticket booking app. Users can book the tickets from the bus view. <br /> <br /> <span class='text-sm text-gray-500'>Please visit GitHub repo for the screenshots.</span>",
     logoUrl: umuttepeTourismLogo,
     baseTech: "React",
-    screenshots: [
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+1" },
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
-    ],
-    features: ["Word game", "Word search", "Word details"],
+    features: ["View Bus Seats", "Book Tickets", "View Bus Schedule"],
     technologies: ["React", "JavaScript"],
     categories: ["Booking"],
-    links: { web: "#", github: "#" },
+    links: { github: "https://github.com/kagantemizkan/kocaeli-turizm" },
   },
   {
     id: "10",
     name: "KOU Syllabus",
     description: "KOU Syllabus app.",
-    detailedDescription: "A syllabus app built with React Native and TypeScript.",
+    detailedDescription:
+      "A complate lecturer portal for Kocaeli University. <br /> <br /> <span class='text-sm text-gray-500'>Please visit GitHub repo for the screenshots.</span>",
     logoUrl: kouSyllabusLogo,
     baseTech: "React",
-    screenshots: [
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+1" },
-      { url: "https://via.placeholder.com/1200x800?text=Word+Game+2" },
-    ],
-    features: ["Word game", "Word search", "Word details"],
-    technologies: ["React"],
+    features: ["Lecturer Portal", "Course Management", "Attendance Management"],
+    technologies: ["React", "JavaScript"],
     categories: ["Education"],
-    links: { web: "#", github: "#" },
+    links: { github: "https://github.com/kagantemizkan/kou-syllabus" },
   },
 ];
-
-export const allTechnologies: Technology[] = [
-  "TypeScript",
-  "JavaScript",
-  "React",
-  "React Native",
-  "Python",
-  "Reanimated",
-  "Gesture Handler",
-  "React Native Skia",
-];
-export const allCategories: Category[] = ["Maps", "Booking", "Game", "Food", "Education", "Lifestyle"];
