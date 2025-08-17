@@ -6,28 +6,32 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { setupThemeListener } from "@/lib/utils";
 import Attribution from "./pages/Attribution";
+import Blogs from "@/pages/Blogs";
+import BlogDetails from "@/pages/BlogDetails";
 
 function App() {
-  // Set up favicon switching based on browser theme
-  useEffect(() => {
-    const cleanup = setupThemeListener();
+	// Set up favicon switching based on browser theme
+	useEffect(() => {
+		const cleanup = setupThemeListener();
 
-    // Cleanup listener on unmount
-    return cleanup;
-  }, []);
+		// Cleanup listener on unmount
+		return cleanup;
+	}, []);
 
-  return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/apps" element={<Home />} />
-          <Route path="/app/:id" element={<AppDetails />} />
-          <Route path="/attribution" element={<Attribution />} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<Layout>
+				<Routes>
+					<Route path="/" element={<Landing />} />
+					<Route path="/apps" element={<Home />} />
+					<Route path="/app/:id" element={<AppDetails />} />
+					<Route path="/blogs" element={<Blogs />} />
+					<Route path="/blog/:id" element={<BlogDetails />} />
+					<Route path="/attribution" element={<Attribution />} />
+				</Routes>
+			</Layout>
+		</BrowserRouter>
+	);
 }
 
 export default App;
