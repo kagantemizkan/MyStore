@@ -5,7 +5,6 @@ import Landing from "@/pages/Landing";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { setupThemeListener } from "@/lib/utils";
-import Attribution from "./pages/Attribution";
 import Blogs from "@/pages/Blogs";
 import BlogDetails from "@/pages/BlogDetails";
 
@@ -27,7 +26,6 @@ function App() {
           <Route path="/app/:id" element={<AppDetails />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blog/:id" element={<BlogDetails />} />
-          <Route path="/attribution" element={<Attribution />} />
         </Routes>
       </Layout>
     </BrowserRouter>
