@@ -15,7 +15,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/ka%C4%9Fan-temizkan-761692175/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-muted hover:bg-accent transition-colors duration-200 group"
@@ -25,7 +25,7 @@ export function Footer() {
               </a>
 
               <a
-                href="https://github.com"
+                href="https://github.com/kagantemizkan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-muted hover:bg-accent transition-colors duration-200 group"

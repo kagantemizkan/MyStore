@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/theme";
-import logoTextBlack from "@/assets/tote-bag-black.svg";
-import logoTextWhite from "@/assets/tote-bag-white.svg";
+import logoTextBlack from "@/assets/logo.png";
+import logoTextWhite from "@/assets/logo.png";
 import { Link } from "react-router-dom";
 import { FaBars, FaSun, FaMoon } from "react-icons/fa";
 import { useState } from "react";
@@ -23,23 +23,26 @@ export function Header() {
           {/* Logo Section */}
           <Link
             to="/"
-            className="flex items-center space-x-2 group transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
+            className="flex items-center space-x-2 group transition-transform duration-200 hover:scale-[1.01] focus:outline-none rounded-lg"
             aria-label="Go to homepage"
           >
             <div className="relative overflow-hidden rounded-lg">
               <img
                 src={theme === "dark" ? logoTextWhite : logoTextBlack}
                 alt="MyStore Logo"
-                className="w-12 h-12 object-contain transition-transform duration-300 group-hover:rotate-12"
+                className="w-10 h-10 object-contain transition-transform duration-300 group-hover:rotate-4"
               />
             </div>
-            <span className="font-bold text-xl text-foreground hidden sm:block group-hover:text-primary transition-colors duration-200">
-              MyStore
+            <span className="font-bold text-lg text-foreground hidden sm:block group-hover:text-primary transition-colors duration-200">
+              My Store
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4">
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/blogs">Blogs</Link>
+            </Button>
             {/* Theme Toggle */}
             <Button
               variant="ghost"
@@ -84,6 +87,18 @@ export function Header() {
           }`}
         >
           <div className="pt-4 border-t border-border/40 space-y-4">
+            {/* Mobile Blogs Link */}
+            <Button
+              variant="ghost"
+              size="sm"
+              className="w-full flex justify-center p-2 hover:bg-accent/50 transition-colors duration-200"
+              asChild
+            >
+              <Link to="/blogs" onClick={() => setIsMobileMenuOpen(false)}>
+                Blogs
+              </Link>
+            </Button>
+
             {/* Mobile Theme Toggle */}
             <Button
               variant="ghost"

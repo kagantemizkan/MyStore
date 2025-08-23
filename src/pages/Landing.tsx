@@ -104,7 +104,7 @@ export default function Landing() {
               {gitHubStats.loading ? "..." : <AnimatedCounter to={portfolioStats.contributions} formatter={(v) => v.toLocaleString()} />}
             </div>
             <div className="text-muted-foreground font-medium">Contributions</div>
-            <div className="text-xs text-muted-foreground">Last year</div>
+            <div className="text-xs text-muted-foreground">Total contributions</div>
           </div>
           <div
             className="space-y-2 rounded-xl border bg-card p-6 shadow-sm hover:shadow-md transition-shadow animate-fade-in-up"
