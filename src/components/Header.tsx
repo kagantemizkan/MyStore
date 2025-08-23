@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/theme";
-import logoTextBlack from "@/assets/logo.png";
-import logoTextWhite from "@/assets/logo.png";
+import AppStoreLogo from "@/components/AppStoreLogo";
 import { Link } from "react-router-dom";
 import { FaBars, FaSun, FaMoon } from "react-icons/fa";
 import { useState } from "react";
@@ -27,11 +26,7 @@ export function Header() {
             aria-label="Go to homepage"
           >
             <div className="relative overflow-hidden rounded-lg">
-              <img
-                src={theme === "dark" ? logoTextWhite : logoTextBlack}
-                alt="MyStore Logo"
-                className="w-10 h-10 object-contain transition-transform duration-300 group-hover:rotate-4"
-              />
+              <AppStoreLogo size={44} />
             </div>
             <span className="font-bold text-lg text-foreground hidden sm:block group-hover:text-primary transition-colors duration-200">
               My Store

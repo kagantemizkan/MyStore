@@ -79,11 +79,15 @@ export default function Gallery({ items, className = "" }: GalleryProps) {
   return (
     <>
       {/* Thumbnail Gallery */}
-      <div className={`flex gap-4 overflow-x-auto pb-4 ${className}`}>
+      <div className={`flex gap-2 sm:gap-4 overflow-x-auto pb-4 ${className}`}>
         {items.map((item, idx) => (
           <div
             key={idx}
-            className="flex-shrink-0 overflow-hidden rounded-lg w-[216px] cursor-pointer hover:opacity-80 transition-opacity"
+            className="flex-shrink-0 overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity"
+            style={{
+              flexBasis: "35%", // adjusts size on smaller screens
+              maxWidth: "216px", // prevents it from getting too large on big screens
+            }}
             onClick={() => openModal(idx)}
           >
             {item.type === "video" ? (
@@ -99,8 +103,13 @@ export default function Gallery({ items, className = "" }: GalleryProps) {
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
           {/* Close Button */}
-          <Button variant="ghost" size="icon" className="absolute top-4 right-4 z-10 text-white hover:bg-white/20" onClick={closeModal}>
-            <FiX className="w-6 h-6" />
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute top-2 sm:top-4 right-2 sm:right-4 z-10 text-white hover:bg-white/20 h-10 w-10 sm:h-12 sm:w-12"
+            onClick={closeModal}
+          >
+            <FiX className="w-5 h-5 sm:w-6 sm:h-6" />
           </Button>
 
           {/* Navigation Buttons */}
@@ -109,24 +118,24 @@ export default function Gallery({ items, className = "" }: GalleryProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 h-10 w-10 sm:h-12 sm:w-12"
                 onClick={goToPrevious}
               >
-                <FiChevronLeft className="w-8 h-8" />
+                <FiChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 h-10 w-10 sm:h-12 sm:w-12"
                 onClick={goToNext}
               >
-                <FiChevronRight className="w-8 h-8" />
+                <FiChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
               </Button>
             </>
           )}
 
           {/* Media Container */}
-          <div className="max-w-[20vw]  flex items-center justify-center">
+          <div className="w-full h-full max-w-[90vw] max-h-[90vh] flex items-center justify-center p-4 sm:p-8">
             {items[currentIndex].type === "video" ? (
               <video src={items[currentIndex].url} controls className="max-w-full max-h-full" style={{ objectFit: "contain" }} />
             ) : (
@@ -140,7 +149,7 @@ export default function Gallery({ items, className = "" }: GalleryProps) {
 
           {/* Image Counter */}
           {items.length > 1 && (
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/50 px-3 py-1 rounded">
+            <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/50 px-2 sm:px-3 py-1 rounded text-sm sm:text-base">
               {currentIndex + 1} / {items.length}
             </div>
           )}

@@ -45,8 +45,8 @@ export default function Landing() {
         <div className="pointer-events-none absolute -bottom-28 -right-24 h-72 w-72 rounded-full bg-gradient-to-tr from-primary/20 to-accent/20 blur-3xl opacity-60 animate-float" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-          <div className="mx-auto mb-6 inline-flex items-center justify-center rounded-xl bg-background/70 px-4 py-2 shadow-sm backdrop-blur animate-fade-in">
-            <AppStoreLogo />
+          <div className="mx-auto mb-6 inline-flex items-center justify-center rounded-xl px-4 py-2 shadow-sm backdrop-blur animate-fade-in">
+            <AppStoreLogo size={112} />
           </div>
           <h1 className="mx-auto max-w-3xl bg-gradient-to-r from-primary to-foreground/70 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent md:text-5xl animate-fade-in-up">
             My Store
