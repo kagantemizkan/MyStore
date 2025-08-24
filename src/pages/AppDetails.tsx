@@ -3,8 +3,9 @@ import { useTranslation } from "react-i18next";
 import { apps } from "@/data/apps";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { FiArrowLeft } from "react-icons/fi";
-import { FaGithub } from "react-icons/fa";
+import { FaApple, FaGithub } from "react-icons/fa";
 
 import Gallery, { type GalleryItem } from "@/components/Gallery";
 
@@ -72,6 +73,14 @@ export default function AppDetails() {
             </a>
           </Button>
         )}
+        {app.links?.appStore && (
+          <Button asChild>
+            <a href={app.links.appStore} target="_blank" rel="noopener noreferrer">
+              <FaApple className="w-5 h-5 mr-2" />
+              {t("viewOnAppStore")}
+            </a>
+          </Button>
+        )}
       </div>
 
       {app.screenshots && (
@@ -84,6 +93,21 @@ export default function AppDetails() {
           </CardContent>
         </Card>
       )}
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Technologies</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-wrap gap-2">
+            {app.technologies?.map((t) => (
+              <Badge key={t} variant="secondary">
+                {t}
+              </Badge>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
       <Card>
         <CardHeader>

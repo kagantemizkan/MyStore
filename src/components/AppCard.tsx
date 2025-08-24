@@ -22,7 +22,7 @@ export function AppCard({ app }: { app: AppItem }) {
               <img
                 src={CrownIcon}
                 alt="Crown"
-                className="absolute top-[-18px] left-[-14px] rotate-[-28deg] h-10 w-10 object-contain group-hover:scale-110 transition-all duration-300 ease-in-out"
+                className="absolute top-[-15px] left-[-11px] rotate-[-28deg] h-8 w-8 object-contain group-hover:scale-110 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100"
               />
             )}
             <div className="h-[3.5rem] w-[3.5rem] rounded-xl bg-muted overflow-hidden flex-shrink-0">

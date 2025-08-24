@@ -20,6 +20,12 @@ import myPlantsImage3 from "@/assets/apps/my-plants/3.png";
 import myPlantsImage4 from "@/assets/apps/my-plants/4.png";
 import myPlantsImage5 from "@/assets/apps/my-plants/5.png";
 
+import atlasOperationImage1 from "@/assets/apps/atlas-operation/1.png";
+import atlasOperationImage2 from "@/assets/apps/atlas-operation/2.png";
+import atlasOperationImage3 from "@/assets/apps/atlas-operation/3.png";
+import atlasOperationImage4 from "@/assets/apps/atlas-operation/4.png";
+import atlasOperationImage5 from "@/assets/apps/atlas-operation/5.png";
+
 // LOGOS
 import rnMapsLogo from "@/assets/apps/react-native-maps/rn-maps-logo.png";
 import bilokmaLogo from "@/assets/apps/bilokma/bilokma-logo.png";
@@ -31,6 +37,8 @@ import myPlantsLogo from "@/assets/apps/my-plants/my-plants-logo.png";
 import numberMatchLogo from "@/assets/apps/number-match/number-match-logo.png";
 import umuttepeTourismLogo from "@/assets/apps/umuttepe-tourism/umuttepe-tourism-logo.png";
 import kouSyllabusLogo from "@/assets/apps/kou-syllabus/kou-syllabus-logo.png";
+import atlasOperationLogo from "@/assets/apps/atlas-operation/atlas-operation-logo.png";
+import atlasCustomerLogo from "@/assets/apps/atlas-customer/atlas-customer-logo.png";
 
 // VIDEOS
 import koumathVideo from "@/assets/apps/koumath/koumath-video.mov";
@@ -51,7 +59,8 @@ export type Technology =
   | "React Native Paper"
   | "Zustand"
   | "Jotai"
-  | "React Native Maps";
+  | "React Native Maps"
+  | "React Native Web";
 
 export const allTechnologies: Technology[] = [
   "TypeScript",
@@ -68,6 +77,7 @@ export const allTechnologies: Technology[] = [
   "Zustand",
   "Jotai",
   "React Native Maps",
+  "React Native Web",
 ];
 export const allCategories: Category[] = ["Maps", "Booking", "Game", "Food", "Education", "Lifestyle"];
 
@@ -86,9 +96,10 @@ export const techToPackageName: Partial<Record<Technology, string>> = {
   Zustand: "zustand",
   Jotai: "jotai",
   "React Native Maps": "react-native-maps",
+  "React Native Web": "react-native-web",
 };
 
-export type Category = "Game" | "Maps" | "Booking" | "Food" | "Education" | "Lifestyle";
+export type Category = "Game" | "Maps" | "Booking" | "Food" | "Education" | "Lifestyle" | "SaaS";
 
 export type Screenshot = {
   url: string;
@@ -113,8 +124,66 @@ export type AppItem = {
 };
 
 export const apps: AppItem[] = [
+  // {
+  //   id: "atlas-customer",
+  //   name: "Atlas",
+  //   description: "For charter companies to manage their operations.",
+  //   detailedDescription:
+  //     "Sail Atlas Operations provides a comprehensive, mobile-friendly solution for yacht charter companies to manage their entire fleet operations. With an intuitive interface designed specifically for operational staff, maintain complete visibility and control of all aspects of your charter business from anywhere.",
+  //   logoUrl: atlasCustomerLogo,
+  //   baseTech: "React Native",
+  //   isEditorSelected: true,
+  //   screenshots: [
+  //     { url: atlasOperationImage1 },
+  //     { url: atlasOperationImage2 },
+  //     { url: atlasOperationImage3 },
+  //     { url: atlasOperationImage4 },
+  //     { url: atlasOperationImage5 },
+  //   ],
+  //   features: [
+  //     "<b>Yacht Management</b> - Manage your yachts, crew, and bookings.",
+  //     "<b>Fleet Management</b> - Manage your fleet of yachts.",
+  //     "<b>Bookings</b> - Manage your bookings.",
+  //     "<b>Invoices</b> - Manage your invoices.",
+  //     "<b>Reports</b> - Generate reports.",
+  //   ],
+  //   technologies: ["React Native", "Expo", "JavaScript", "Zustand", "Gesture Handler", "Reanimated", "React Native Web"],
+  //   categories: ["SaaS"],
+  //   links: {
+  //     appStore: "https://apps.apple.com/us/app/atlas-operations-app/id6743802951",
+  //   },
+  // },
   {
-    id: "1",
+    id: "atlas-operation",
+    name: "Atlas Operation",
+    description: "For charter companies to manage their operations.",
+    detailedDescription:
+      "Sail Atlas Operations provides a comprehensive, mobile-friendly solution for yacht charter companies to manage their entire fleet operations. With an intuitive interface designed specifically for operational staff, maintain complete visibility and control of all aspects of your charter business from anywhere.",
+    logoUrl: atlasOperationLogo,
+    baseTech: "React Native",
+    isEditorSelected: true,
+    screenshots: [
+      { url: atlasOperationImage1 },
+      { url: atlasOperationImage2 },
+      { url: atlasOperationImage3 },
+      { url: atlasOperationImage4 },
+      { url: atlasOperationImage5 },
+    ],
+    features: [
+      "<b>Yacht Management</b> - Manage your yachts, crew, and bookings.",
+      "<b>Fleet Management</b> - Manage your fleet of yachts.",
+      "<b>Bookings</b> - Manage your bookings.",
+      "<b>Invoices</b> - Manage your invoices.",
+      "<b>Reports</b> - Generate reports.",
+    ],
+    technologies: ["React Native", "Expo", "TypeScript", "Zustand", "Gesture Handler", "Reanimated", "React Native Web"],
+    categories: ["SaaS"],
+    links: {
+      appStore: "https://apps.apple.com/us/app/atlas-operations-app/id6743802951",
+    },
+  },
+  {
+    id: "rn-maps",
     name: "Maps",
     description: "A map app built with React Native.",
     detailedDescription:
@@ -140,7 +209,7 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/RNmaps" },
   },
   {
-    id: "2",
+    id: "koumath",
     name: "KOUmath",
     description: "AI math solver app.",
     detailedDescription:
@@ -172,7 +241,7 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/koumath" },
   },
   {
-    id: "3",
+    id: "bilokma",
     name: "Bi'lokma",
     description: "An application developed to prevent food waste.",
     detailedDescription:
@@ -201,7 +270,7 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/bilokma" },
   },
   {
-    id: "4",
+    id: "flight-ticket",
     name: "Flight Ticket",
     description: "Flight ticket booking app.",
     detailedDescription: "A basic flight ticket app that generates random tickets and removes them.",
@@ -218,7 +287,7 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/flightTicketApp" },
   },
   {
-    id: "5",
+    id: "word-game",
     name: "Word Game",
     description: "Word game app.",
     detailedDescription:
@@ -242,7 +311,7 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/worldle" },
   },
   {
-    id: "6",
+    id: "flappy-bird",
     name: "Flappy Bird",
     description: "Bird game app.",
     detailedDescription:
@@ -264,7 +333,7 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/RNflappyBird" },
   },
   {
-    id: "7",
+    id: "my-plants",
     name: "My Plants",
     description: "Auto plant watering & schedule app.",
     detailedDescription:
@@ -284,7 +353,7 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/MyPlants" },
   },
   {
-    id: "8",
+    id: "number-match",
     name: "Number Match",
     description: "Number match game app.",
     detailedDescription:
@@ -303,7 +372,7 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/python-number-matching" },
   },
   {
-    id: "9",
+    id: "umuttepe-tourism",
     name: "Umuttepe Tourism",
     description: "Umuttepe Tourism app.",
     detailedDescription:
@@ -316,7 +385,7 @@ export const apps: AppItem[] = [
     links: { github: "https://github.com/kagantemizkan/kocaeli-turizm" },
   },
   {
-    id: "10",
+    id: "kou-syllabus",
     name: "KOU Syllabus",
     description: "KOU Syllabus app.",
     detailedDescription:

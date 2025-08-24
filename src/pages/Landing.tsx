@@ -148,43 +148,45 @@ export default function Landing() {
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
             {featuredApps.map((app, idx) => (
-              <div
-                key={app.id}
-                className="group relative overflow-hidden rounded-xl border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-in-up"
-                style={{ animationDelay: `${80 + idx * 80}ms` }}
-              >
-                <div className="flex items-start space-x-4 mb-4">
-                  {app.logoUrl && (
-                    <img src={app.logoUrl} alt={`${app.name} logo`} className="w-12 h-12 rounded-lg object-contain flex-shrink-0" />
-                  )}
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">{app.name}</h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{app.description}</p>
+              <Link to={`/app/${app.id}`} key={app.id}>
+                <div
+                  key={app.id}
+                  className="group relative overflow-hidden rounded-xl border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-in-up"
+                  style={{ animationDelay: `${80 + idx * 80}ms` }}
+                >
+                  <div className="flex items-start space-x-4 mb-4">
+                    {app.logoUrl && (
+                      <img src={app.logoUrl} alt={`${app.name} logo`} className="w-12 h-12 rounded-lg object-contain flex-shrink-0" />
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">{app.name}</h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2 line-clamp-1">{app.description}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {app.technologies.slice(0, 3).map((tech) => (
-                    <span key={tech} className="px-2 py-1 text-xs bg-primary/10 text-primary rounded-md font-medium">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                {app.links?.github && (
-                  <div className="flex items-center justify-end">
-                    <Button variant="ghost" size="sm" asChild>
-                      <a href={app.links.github} target="_blank" rel="noopener noreferrer" className="text-xs flex items-center gap-1">
-                        GitHub
-                        <MdArrowOutward className="w-4 h-4" />
-                      </a>
-                    </Button>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {app.technologies.slice(0, 3).map((tech) => (
+                      <span key={tech} className="px-2 py-1 text-xs bg-primary/10 text-primary rounded-md font-medium">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-                )}
+                  {/* {app.links?.github && (
+                    <div className="flex items-center justify-end pointer-events-auto">
+                      <Button variant="ghost" size="sm" asChild>
+                        <a href={app.links.github} target="_blank" rel="noopener noreferrer" className="text-xs flex items-center gap-1">
+                          GitHub
+                          <MdArrowOutward className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  )} */}
 
-                {/* subtle gradient sheen on hover */}
-                <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute -inset-x-10 -top-1/2 h-full translate-y-6 rotate-6 bg-gradient-to-r from-transparent via-white/10 to-transparent blur-2xl" />
+                  {/* subtle gradient sheen on hover */}
+                  <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute -inset-x-10 -top-1/2 h-full translate-y-6 rotate-6 bg-gradient-to-r from-transparent via-white/10 to-transparent blur-2xl" />
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

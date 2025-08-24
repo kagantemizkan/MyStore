@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import AppDetails from "@/pages/AppDetails";
 import Landing from "@/pages/Landing";
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Landing />} />
