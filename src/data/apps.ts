@@ -38,7 +38,7 @@ import numberMatchLogo from "@/assets/apps/number-match/number-match-logo.png";
 import umuttepeTourismLogo from "@/assets/apps/umuttepe-tourism/umuttepe-tourism-logo.png";
 import kouSyllabusLogo from "@/assets/apps/kou-syllabus/kou-syllabus-logo.png";
 import atlasOperationLogo from "@/assets/apps/atlas-operation/atlas-operation-logo.png";
-import atlasCustomerLogo from "@/assets/apps/atlas-customer/atlas-customer-logo.png";
+// import atlasCustomerLogo from "@/assets/apps/atlas-customer/atlas-customer-logo.png";
 
 // VIDEOS
 import koumathVideo from "@/assets/apps/koumath/koumath-video.mov";
