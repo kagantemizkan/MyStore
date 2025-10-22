@@ -26,6 +26,16 @@ import atlasOperationImage3 from "@/assets/apps/atlas-operation/3.png";
 import atlasOperationImage4 from "@/assets/apps/atlas-operation/4.png";
 import atlasOperationImage5 from "@/assets/apps/atlas-operation/5.png";
 
+import atlasCustomerImage1 from "@/assets/apps/atlas-customer/1.png";
+import atlasCustomerImage2 from "@/assets/apps/atlas-customer/2.png";
+import atlasCustomerImage3 from "@/assets/apps/atlas-customer/3.png";
+import atlasCustomerImage4 from "@/assets/apps/atlas-customer/4.png";
+import atlasCustomerImage5 from "@/assets/apps/atlas-customer/5.png";
+import atlasCustomerImage6 from "@/assets/apps/atlas-customer/6.png";
+import atlasCustomerImage7 from "@/assets/apps/atlas-customer/7.png";
+import atlasCustomerImage8 from "@/assets/apps/atlas-customer/8.png";
+import atlasCustomerImage9 from "@/assets/apps/atlas-customer/9.png";
+
 // LOGOS
 import rnMapsLogo from "@/assets/apps/react-native-maps/rn-maps-logo.png";
 import bilokmaLogo from "@/assets/apps/bilokma/bilokma-logo.png";
@@ -38,12 +48,14 @@ import numberMatchLogo from "@/assets/apps/number-match/number-match-logo.png";
 import umuttepeTourismLogo from "@/assets/apps/umuttepe-tourism/umuttepe-tourism-logo.png";
 import kouSyllabusLogo from "@/assets/apps/kou-syllabus/kou-syllabus-logo.png";
 import atlasOperationLogo from "@/assets/apps/atlas-operation/atlas-operation-logo.png";
-// import atlasCustomerLogo from "@/assets/apps/atlas-customer/atlas-customer-logo.png";
+import tripInvoiceLogo from "@/assets/apps/trip-invoice/trip-invoice.png";
+import atlasCustomerLogo from "@/assets/apps/atlas-customer/atlas-customer-logo.png";
 
 // VIDEOS
 import koumathVideo from "@/assets/apps/koumath/koumath-video.mov";
 import rnMapsVideo from "@/assets/apps/react-native-maps/rn-maps.webm";
 import flightTicketVideo from "@/assets/apps/flight-ticket/flight-app-video.mp4";
+import tripInvoiceVideo from "@/assets/apps/trip-invoice/trip_invoice-video.mov";
 
 export type Technology =
   | "React"
@@ -60,7 +72,9 @@ export type Technology =
   | "Zustand"
   | "Jotai"
   | "React Native Maps"
-  | "React Native Web";
+  | "React Native Web"
+  | "React Native Screens"
+  | "MMKV";
 
 export const allTechnologies: Technology[] = [
   "TypeScript",
@@ -78,6 +92,8 @@ export const allTechnologies: Technology[] = [
   "Jotai",
   "React Native Maps",
   "React Native Web",
+  "React Native Screens",
+  "MMKV",
 ];
 export const allCategories: Category[] = ["Maps", "Booking", "Game", "Food", "Education", "Lifestyle"];
 
@@ -97,6 +113,7 @@ export const techToPackageName: Partial<Record<Technology, string>> = {
   Jotai: "jotai",
   "React Native Maps": "react-native-maps",
   "React Native Web": "react-native-web",
+  "React Native Screens": "react-native-screens",
 };
 
 export type Category = "Game" | "Maps" | "Booking" | "Food" | "Education" | "Lifestyle" | "SaaS";
@@ -124,35 +141,39 @@ export type AppItem = {
 };
 
 export const apps: AppItem[] = [
-  // {
-  //   id: "atlas-customer",
-  //   name: "Atlas",
-  //   description: "For charter companies to manage their operations.",
-  //   detailedDescription:
-  //     "Sail Atlas Operations provides a comprehensive, mobile-friendly solution for yacht charter companies to manage their entire fleet operations. With an intuitive interface designed specifically for operational staff, maintain complete visibility and control of all aspects of your charter business from anywhere.",
-  //   logoUrl: atlasCustomerLogo,
-  //   baseTech: "React Native",
-  //   isEditorSelected: true,
-  //   screenshots: [
-  //     { url: atlasOperationImage1 },
-  //     { url: atlasOperationImage2 },
-  //     { url: atlasOperationImage3 },
-  //     { url: atlasOperationImage4 },
-  //     { url: atlasOperationImage5 },
-  //   ],
-  //   features: [
-  //     "<b>Yacht Management</b> - Manage your yachts, crew, and bookings.",
-  //     "<b>Fleet Management</b> - Manage your fleet of yachts.",
-  //     "<b>Bookings</b> - Manage your bookings.",
-  //     "<b>Invoices</b> - Manage your invoices.",
-  //     "<b>Reports</b> - Generate reports.",
-  //   ],
-  //   technologies: ["React Native", "Expo", "JavaScript", "Zustand", "Gesture Handler", "Reanimated", "React Native Web"],
-  //   categories: ["SaaS"],
-  //   links: {
-  //     appStore: "https://apps.apple.com/us/app/atlas-operations-app/id6743802951",
-  //   },
-  // },
+  {
+    id: "atlas-customer",
+    name: "Atlas",
+    description: "For charter companies to manage their operations.",
+    detailedDescription:
+      "Sail Atlas Operations provides a comprehensive, mobile-friendly solution for yacht charter companies to manage their entire fleet operations. With an intuitive interface designed specifically for operational staff, maintain complete visibility and control of all aspects of your charter business from anywhere.",
+    logoUrl: atlasCustomerLogo,
+    baseTech: "React Native",
+    isEditorSelected: true,
+    screenshots: [
+      { url: atlasCustomerImage1 },
+      { url: atlasCustomerImage2 },
+      { url: atlasCustomerImage3 },
+      { url: atlasCustomerImage4 },
+      { url: atlasCustomerImage5 },
+      { url: atlasCustomerImage6 },
+      { url: atlasCustomerImage7 },
+      { url: atlasCustomerImage8 },
+      { url: atlasCustomerImage9 },
+    ],
+    features: [
+      "<b>Yacht Management</b> - Manage your yachts, crew, and bookings.",
+      "<b>Fleet Management</b> - Manage your fleet of yachts.",
+      "<b>Bookings</b> - Manage your bookings.",
+      "<b>Invoices</b> - Manage your invoices.",
+      "<b>Reports</b> - Generate reports.",
+    ],
+    technologies: ["React Native", "Expo", "JavaScript", "Zustand", "Gesture Handler", "Reanimated", "React Native Web", "MMKV"],
+    categories: ["SaaS"],
+    links: {
+      appStore: "https://apps.apple.com/tr/app/sail-atlas/id6748818673?l=tr",
+    },
+  },
   {
     id: "atlas-operation",
     name: "Atlas Operation",
@@ -176,10 +197,41 @@ export const apps: AppItem[] = [
       "<b>Invoices</b> - Manage your invoices.",
       "<b>Reports</b> - Generate reports.",
     ],
-    technologies: ["React Native", "Expo", "TypeScript", "Zustand", "Gesture Handler", "Reanimated", "React Native Web"],
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Zustand",
+      "Gesture Handler",
+      "Reanimated",
+      "React Native Web",
+      "React Native Screens",
+    ],
     categories: ["SaaS"],
     links: {
       appStore: "https://apps.apple.com/us/app/atlas-operations-app/id6743802951",
+    },
+  },
+  {
+    id: "trip-invoice",
+    name: "Trip Invoice",
+    description: "Invoice generation and management app.",
+    detailedDescription:
+      "A comprehensive invoice generation and management application built with React Native. The app provides smooth animations and interactive features for creating, managing, and tracking invoices with a modern user interface.",
+    logoUrl: tripInvoiceLogo,
+    baseTech: "React Native",
+    videoUrl: tripInvoiceVideo,
+    screenshots: [],
+    features: [
+      "<b>Invoice Generation:</b> Create and manage invoices with ease",
+      "<b>Smooth Animations:</b> Enhanced with Reanimated for fluid user experience",
+      "<b>Interactive UI:</b> Built with React Native Skia for rich graphics",
+      "<b>Modern Design:</b> Clean and intuitive interface",
+    ],
+    technologies: ["React Native", "React Native Skia", "Reanimated"],
+    categories: ["SaaS"],
+    links: {
+      github: "https://github.com/kagantemizkan/trip-invoice",
     },
   },
   {
