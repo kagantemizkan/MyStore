@@ -36,6 +36,14 @@ import atlasCustomerImage7 from "@/assets/apps/atlas-customer/7.png";
 import atlasCustomerImage8 from "@/assets/apps/atlas-customer/8.png";
 import atlasCustomerImage9 from "@/assets/apps/atlas-customer/9.png";
 
+import damgaImage1 from "@/assets/apps/damga/1.png";
+import damgaImage2 from "@/assets/apps/damga/2.png";
+import damgaImage3 from "@/assets/apps/damga/3.png";
+import damgaImage4 from "@/assets/apps/damga/4.png";
+import damgaImage5 from "@/assets/apps/damga/5.png";
+import damgaImage6 from "@/assets/apps/damga/6.png";
+import damgaImage7 from "@/assets/apps/damga/7.png";
+
 // LOGOS
 import rnMapsLogo from "@/assets/apps/react-native-maps/rn-maps-logo.png";
 import bilokmaLogo from "@/assets/apps/bilokma/bilokma-logo.png";
@@ -50,6 +58,7 @@ import kouSyllabusLogo from "@/assets/apps/kou-syllabus/kou-syllabus-logo.png";
 import atlasOperationLogo from "@/assets/apps/atlas-operation/atlas-operation-logo.png";
 import tripInvoiceLogo from "@/assets/apps/trip-invoice/trip-invoice.png";
 import atlasCustomerLogo from "@/assets/apps/atlas-customer/atlas-customer-logo.png";
+import damgaLogo from "@/assets/apps/damga/damga-logo.png";
 
 // VIDEOS
 import koumathVideo from "@/assets/apps/koumath/koumath-video.mov";
@@ -141,6 +150,26 @@ export type AppItem = {
 };
 
 export const apps: AppItem[] = [
+  {
+    id: "damga",
+    name: "Damga",
+    description: "Digitalized loyality cards.",
+    detailedDescription: "Damga is a digitalized loyality cards app that allows you to manage your loyality cards and points.",
+    isEditorSelected: true,
+    logoUrl: damgaLogo,
+    baseTech: "React Native",
+    technologies: ["React Native", "Expo", "TypeScript", "Gesture Handler", "Reanimated"],
+    categories: ["Lifestyle"],
+    screenshots: [
+      { url: damgaImage1 },
+      { url: damgaImage2 },
+      { url: damgaImage3 },
+      { url: damgaImage4 },
+      { url: damgaImage5 },
+      { url: damgaImage6 },
+      { url: damgaImage7 },
+    ],
+  },
   {
     id: "atlas-customer",
     name: "Atlas",
