@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "https://wvw.dev/apps.schema.json",
     "store": {
         "name": "Kagan Temizkan",
         "developer": "Kagan Temizkan",
@@ -9,32 +9,32 @@
     },
     "categories": [
         {
-            "id": "Lifestyle",
+            "id": "lifestyle",
             "name": "Lifestyle"
         },
         {
-            "id": "SaaS",
-            "name": "SaaS"
+            "id": "productivity",
+            "name": "Productivity"
         },
         {
-            "id": "Maps",
-            "name": "Maps"
+            "id": "navigation",
+            "name": "Navigation"
         },
         {
-            "id": "Education",
+            "id": "education",
             "name": "Education"
         },
         {
-            "id": "Food",
-            "name": "Food"
+            "id": "food-drink",
+            "name": "Food & Drink"
         },
         {
-            "id": "Booking",
-            "name": "Booking"
+            "id": "travel",
+            "name": "Travel"
         },
         {
-            "id": "Game",
-            "name": "Game"
+            "id": "games",
+            "name": "Games"
         }
     ],
     "apps": [
@@ -46,7 +46,7 @@
             "longDescription": "Damga is a digitalized loyalty cards app that allows you to manage your loyalty cards and points.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/damga-logo-p5IeWNAL.png",
             "category": [
-                "Lifestyle"
+                "lifestyle"
             ],
             "platform": "React Native",
             "price": "Free",
@@ -69,7 +69,7 @@
             "longDescription": "Invoice generation and tracking system built with React Native.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/trip-invoice-BxcyiSmR.png",
             "category": [
-                "SaaS"
+                "productivity"
             ],
             "platform": "React Native",
             "price": "Free",
@@ -84,7 +84,7 @@
             "longDescription": "Navigation and map exploration application.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/rn-maps-logo-B0H9HJjE.png",
             "category": [
-                "Maps"
+                "navigation"
             ],
             "platform": "React Native",
             "price": "Free",
@@ -103,7 +103,7 @@
             "longDescription": "Photomath-like AI math solver with camera recognition.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/koumath-logo-B8_Amk9_.png",
             "category": [
-                "Education"
+                "education"
             ],
             "platform": "React Native",
             "price": "Free",
@@ -126,7 +126,7 @@
             "longDescription": "Application connecting bakeries with users for leftover food.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/bilokma-logo-Bi-cwh1s.png",
             "category": [
-                "Food"
+                "food-drink"
             ],
             "platform": "React Native",
             "price": "Free",
@@ -151,7 +151,7 @@
             "longDescription": "A basic flight ticket app that generates random tickets and removes them.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/flight-ticket-logo-CeBiooom.png",
             "category": [
-                "Booking"
+                "travel"
             ],
             "platform": "React Native",
             "price": "Free",
@@ -173,7 +173,7 @@
             "longDescription": "Word puzzle game built with React Native.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/word-game-logo-CEXOfg9W.png",
             "category": [
-                "Game"
+                "games"
             ],
             "platform": "React Native",
             "price": "Free",
@@ -195,7 +195,7 @@
             "longDescription": "Flappy Bird game built using React Native Skia.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/rn-bird-logo-BcYa_IFc.png",
             "category": [
-                "Game"
+                "games"
             ],
             "platform": "React Native",
             "price": "Free",
@@ -213,7 +213,7 @@
             "longDescription": "IoT connected plant watering system.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/my-plants-logo-D0tKCCTG.png",
             "category": [
-                "Lifestyle"
+                "lifestyle"
             ],
             "platform": "React Native",
             "price": "Free",
@@ -234,7 +234,7 @@
             "longDescription": "The goal of the game is to find adjacent numbers on the board and match them. The higher the value of the matched numbers, the more points the player wins.",
             "icon": "https://my-store-six-ruby.vercel.app/assets/number-match-logo-_P-lTy4H.png",
             "category": [
-                "Game"
+                "games"
             ],
             "platform": "Python",
             "price": "Free",
