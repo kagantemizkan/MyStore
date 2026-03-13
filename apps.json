@@ -1,0 +1,139 @@
+{
+    "categories": [
+        {
+            "id": "game",
+            "name": "Game"
+        },
+        {
+            "id": "maps",
+            "name": "Maps"
+        },
+        {
+            "id": "booking",
+            "name": "Booking"
+        },
+        {
+            "id": "food",
+            "name": "Food"
+        },
+        {
+            "id": "education",
+            "name": "Education"
+        },
+        {
+            "id": "lifestyle",
+            "name": "Lifestyle"
+        },
+        {
+            "id": "saas",
+            "name": "SaaS"
+        }
+    ],
+    "featured": [
+        "damga",
+        "atlas-customer",
+        "atlas-operation",
+        "rn-maps",
+        "koumath"
+    ],
+    "apps": [
+        {
+            "id": "damga",
+            "name": "Damga",
+            "description": "Digitalized loyalty cards app.",
+            "category": "lifestyle",
+            "url": "https://github.com/kagantemizkan"
+        },
+        {
+            "id": "atlas-customer",
+            "name": "Atlas",
+            "description": "Charter company fleet management app.",
+            "category": "saas",
+            "url": "https://apps.apple.com/tr/app/sail-atlas/id6748818673"
+        },
+        {
+            "id": "atlas-operation",
+            "name": "Atlas Operation",
+            "description": "Mobile operations management for yacht charter companies.",
+            "category": "saas",
+            "url": "https://apps.apple.com/us/app/atlas-operations-app/id6743802951"
+        },
+        {
+            "id": "trip-invoice",
+            "name": "Trip Invoice",
+            "description": "Invoice generation and management app.",
+            "category": "saas",
+            "url": "https://github.com/kagantemizkan/trip-invoice"
+        },
+        {
+            "id": "rn-maps",
+            "name": "Maps",
+            "description": "React Native map and navigation app.",
+            "category": "maps",
+            "url": "https://github.com/kagantemizkan/RNmaps"
+        },
+        {
+            "id": "koumath",
+            "name": "KOUmath",
+            "description": "AI math solver inspired by Photomath.",
+            "category": "education",
+            "url": "https://github.com/kagantemizkan/koumath"
+        },
+        {
+            "id": "bilokma",
+            "name": "Bi'lokma",
+            "description": "Food waste reduction app connecting bakeries and users.",
+            "category": "food",
+            "url": "https://github.com/kagantemizkan/bilokma"
+        },
+        {
+            "id": "flight-ticket",
+            "name": "Flight Ticket",
+            "description": "Animated flight ticket booking UI.",
+            "category": "booking",
+            "url": "https://github.com/kagantemizkan/flightTicketApp"
+        },
+        {
+            "id": "word-game",
+            "name": "Word Game",
+            "description": "React Native word puzzle game.",
+            "category": "game",
+            "url": "https://github.com/kagantemizkan/worldle"
+        },
+        {
+            "id": "flappy-bird",
+            "name": "Flappy Bird",
+            "description": "Flappy Bird clone built with React Native Skia.",
+            "category": "game",
+            "url": "https://github.com/kagantemizkan/RNflappyBird"
+        },
+        {
+            "id": "my-plants",
+            "name": "My Plants",
+            "description": "Arduino connected plant watering system.",
+            "category": "lifestyle",
+            "url": "https://github.com/kagantemizkan/MyPlants"
+        },
+        {
+            "id": "number-match",
+            "name": "Number Match",
+            "description": "Python number matching puzzle game.",
+            "category": "game",
+            "url": "https://github.com/kagantemizkan/python-number-matching"
+        },
+        {
+            "id": "umuttepe-tourism",
+            "name": "Umuttepe Tourism",
+            "description": "Bus ticket booking application.",
+            "category": "booking",
+            "url": "https://github.com/kagantemizkan/kocaeli-turizm"
+        },
+        {
+            "id": "kou-syllabus",
+            "name": "KOU Syllabus",
+            "description": "Lecturer portal for Kocaeli University.",
+            "category": "education",
+            "url": "https://github.com/kagantemizkan/kou-syllabus"
+        }
+    ]
+}
