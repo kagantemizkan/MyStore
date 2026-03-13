@@ -1,274 +1,255 @@
-[
-    {
-        "id": "damga",
-        "name": "Damga",
-        "description": "Digitalized loyality cards.",
-        "detailedDescription": "Damga is a digitalized loyality cards app that allows you to manage your loyality cards and points.",
-        "isEditorSelected": true,
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/damga-logo-p5IeWNAL.png",
-        "baseTech": "React Native",
-        "technologies": [
-            "React Native",
-            "Expo",
-            "TypeScript",
-            "Gesture Handler",
-            "Reanimated"
-        ],
-        "categories": [
-            "Lifestyle"
-        ],
-        "screenshots": [
-            { "url": "https://my-store-six-ruby.vercel.app/assets/1-CwKcGcxW.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/2-CHxhgIbi.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/3-B81N_3qu.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/4-BscylW08.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/5-DPO0lGYa.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/6-CDE0C8r2.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/7-DPTGlFzL.png" }
-        ]
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "store": {
+        "name": "Kagan Temizkan",
+        "developer": "Kagan Temizkan",
+        "tagline": "Junior React Native Developer Portfolio",
+        "url": "https://my-store-six-ruby.vercel.app/apps",
+        "github": "https://github.com/kagantemizkan"
     },
-    {
-        "id": "trip-invoice",
-        "name": "Trip Invoice",
-        "description": "Invoice generation and management app.",
-        "detailedDescription": "Invoice generation and tracking system built with React Native.",
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/trip-invoice-BxcyiSmR.png",
-        "videoUrl": "https://my-store-six-ruby.vercel.app/assets/trip_invoice-video-BmPP8yvR.mov",
-        "baseTech": "React Native",
-        "screenshots": [],
-        "technologies": [
-            "React Native",
-            "React Native Skia",
-            "Reanimated"
-        ],
-        "categories": [
-            "SaaS"
-        ],
-        "links": {
-            "github": "https://github.com/kagantemizkan/trip-invoice"
+    "categories": [
+        {
+            "id": "Lifestyle",
+            "name": "Lifestyle"
+        },
+        {
+            "id": "SaaS",
+            "name": "SaaS"
+        },
+        {
+            "id": "Maps",
+            "name": "Maps"
+        },
+        {
+            "id": "Education",
+            "name": "Education"
+        },
+        {
+            "id": "Food",
+            "name": "Food"
+        },
+        {
+            "id": "Booking",
+            "name": "Booking"
+        },
+        {
+            "id": "Game",
+            "name": "Game"
         }
-    },
-    {
-        "id": "rn-maps",
-        "name": "Maps",
-        "description": "Google Maps clone built with React Native.",
-        "detailedDescription": "Navigation and map exploration application.",
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/rn-maps-logo-B0H9HJjE.png",
-        "videoUrl": "https://my-store-six-ruby.vercel.app/assets/rn-maps-ClTIWjYd.webm",
-        "baseTech": "React Native",
-        "screenshots": [
-            { "url": "https://github.com/kagantemizkan/mapsForBlinds/assets/46727689/64543788-bc8f-41dc-bc34-aaaae7ab022a" },
-            { "url": "https://github.com/kagantemizkan/RNmaps/assets/46727689/3db80b35-d9ff-4dea-ba6d-ae89acb4e1fb" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/rn-maps-settings-DcZNHJsb.png" }
-        ],
-        "technologies": [
-            "React Native",
-            "JavaScript",
-            "Jotai",
-            "React Native Paper"
-        ],
-        "categories": [
-            "Maps"
-        ],
-        "links": {
-            "github": "https://github.com/kagantemizkan/RNmaps"
+    ],
+    "apps": [
+        {
+            "id": "damga",
+            "name": "Damga",
+            "subtitle": "Digitalized loyalty cards.",
+            "description": "Damga is a digitalized loyalty cards app that allows you to manage your loyalty cards and points.",
+            "longDescription": "Damga is a digitalized loyalty cards app that allows you to manage your loyalty cards and points.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/damga-logo-p5IeWNAL.png",
+            "category": [
+                "Lifestyle"
+            ],
+            "platform": "React Native",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan",
+            "screenshots": [
+                "https://my-store-six-ruby.vercel.app/assets/1-CwKcGcxW.png",
+                "https://my-store-six-ruby.vercel.app/assets/2-CHxhgIbi.png",
+                "https://my-store-six-ruby.vercel.app/assets/3-B81N_3qu.png",
+                "https://my-store-six-ruby.vercel.app/assets/4-BscylW08.png",
+                "https://my-store-six-ruby.vercel.app/assets/5-DPO0lGYa.png",
+                "https://my-store-six-ruby.vercel.app/assets/6-CDE0C8r2.png",
+                "https://my-store-six-ruby.vercel.app/assets/7-DPTGlFzL.png"
+            ]
+        },
+        {
+            "id": "trip-invoice",
+            "name": "Trip Invoice",
+            "subtitle": "Invoice generation and management app.",
+            "description": "Invoice generation and tracking system built with React Native.",
+            "longDescription": "Invoice generation and tracking system built with React Native.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/trip-invoice-BxcyiSmR.png",
+            "category": [
+                "SaaS"
+            ],
+            "platform": "React Native",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan/trip-invoice",
+            "screenshots": []
+        },
+        {
+            "id": "rn-maps",
+            "name": "Maps",
+            "subtitle": "Google Maps clone built with React Native.",
+            "description": "Navigation and map exploration application.",
+            "longDescription": "Navigation and map exploration application.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/rn-maps-logo-B0H9HJjE.png",
+            "category": [
+                "Maps"
+            ],
+            "platform": "React Native",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan/RNmaps",
+            "screenshots": [
+                "https://github.com/kagantemizkan/mapsForBlinds/assets/46727689/64543788-bc8f-41dc-bc34-aaaae7ab022a",
+                "https://github.com/kagantemizkan/RNmaps/assets/46727689/3db80b35-d9ff-4dea-ba6d-ae89acb4e1fb",
+                "https://my-store-six-ruby.vercel.app/assets/rn-maps-settings-DcZNHJsb.png"
+            ]
+        },
+        {
+            "id": "koumath",
+            "name": "KOUmath",
+            "subtitle": "AI math solver.",
+            "description": "Photomath-like AI math solver with camera recognition.",
+            "longDescription": "Photomath-like AI math solver with camera recognition.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/koumath-logo-B8_Amk9_.png",
+            "category": [
+                "Education"
+            ],
+            "platform": "React Native",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan/koumath",
+            "screenshots": [
+                "https://github.com/user-attachments/assets/63aa9796-cc61-4b10-a4ff-f4519be8227d",
+                "https://github.com/user-attachments/assets/558de7c8-453a-43d6-ac28-97b505b05a68",
+                "https://github.com/user-attachments/assets/7da6324d-93df-4a1e-9981-1b163a822d2a",
+                "https://github.com/user-attachments/assets/bbe42fd7-b112-4c4a-ba68-993c930b486d",
+                "https://github.com/user-attachments/assets/75e22cd7-424f-4417-942d-cf4bac0c0100",
+                "https://github.com/user-attachments/assets/cad93ac0-90d9-4eb7-8ae8-8d988c39e1d1",
+                "https://github.com/user-attachments/assets/11c664d9-3b50-4727-a657-291335df4987"
+            ]
+        },
+        {
+            "id": "bilokma",
+            "name": "Bi'lokma",
+            "subtitle": "Prevent food waste.",
+            "description": "Application connecting bakeries with users for leftover food.",
+            "longDescription": "Application connecting bakeries with users for leftover food.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/bilokma-logo-Bi-cwh1s.png",
+            "category": [
+                "Food"
+            ],
+            "platform": "React Native",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan/bilokma",
+            "screenshots": [
+                "https://github.com/kagantemizkan/bilokma/assets/46727689/19b46d3f-bea8-4b58-9fa3-13c6694ac2e9",
+                "https://github.com/kagantemizkan/bilokma/assets/46727689/870df9bd-1348-4d96-9fdd-f8dd7f51d62b",
+                "https://github.com/kagantemizkan/bilokma/assets/46727689/4bc2206c-9635-4a62-9b14-8600693e9de2",
+                "https://github.com/kagantemizkan/bilokma/assets/46727689/ee586ca1-7720-41a4-8931-fc0b1de5e52a",
+                "https://github.com/kagantemizkan/bilokma/assets/46727689/bbdf7467-6df4-48d0-8668-10bc38b5c8f4",
+                "https://github.com/kagantemizkan/bilokma/assets/46727689/339ee989-4552-40ea-b99b-a5ff08b8b95a",
+                "https://github.com/kagantemizkan/bilokma/assets/46727689/ec424808-429f-4bd7-9289-c06bb55247ce",
+                "https://github.com/kagantemizkan/bilokma/assets/46727689/7747c1ad-5ab5-402b-af14-a7382762ab67",
+                "https://github.com/kagantemizkan/bilokma/assets/46727689/c693a304-eafd-400f-9323-d418ac290fec"
+            ]
+        },
+        {
+            "id": "flight-ticket",
+            "name": "Flight Ticket",
+            "subtitle": "Flight ticket booking app.",
+            "description": "A basic flight ticket app that generates random tickets and removes them.",
+            "longDescription": "A basic flight ticket app that generates random tickets and removes them.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/flight-ticket-logo-CeBiooom.png",
+            "category": [
+                "Booking"
+            ],
+            "platform": "React Native",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan/flightTicketApp",
+            "features": [
+                "Smooth Animations: Enhanced with Reanimated for a fluid user experience.",
+                "Dynamic Ticket View: Utilizes react-native-svg for an interactive ticket display."
+            ],
+            "screenshots": [
+                "https://my-store-six-ruby.vercel.app/assets/S1-BEsuJBYQ.png",
+                "https://my-store-six-ruby.vercel.app/assets/S2-g2QdLOx3.png"
+            ]
+        },
+        {
+            "id": "wordle",
+            "name": "Wordle Game",
+            "subtitle": "Word guessing game.",
+            "description": "Word puzzle game built with React Native.",
+            "longDescription": "Word puzzle game built with React Native.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/word-game-logo-CEXOfg9W.png",
+            "category": [
+                "Game"
+            ],
+            "platform": "React Native",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan/worldle",
+            "screenshots": [
+                "https://my-store-six-ruby.vercel.app/assets/1-BFyt7Gyl.png",
+                "https://my-store-six-ruby.vercel.app/assets/2-DZzqFlCk.png",
+                "https://my-store-six-ruby.vercel.app/assets/4-3W888tTD.png",
+                "https://my-store-six-ruby.vercel.app/assets/6-DTO4xI12.png",
+                "https://my-store-six-ruby.vercel.app/assets/7-C0ienYWO.png",
+                "https://my-store-six-ruby.vercel.app/assets/8-Dsj_FGrm.png"
+            ]
+        },
+        {
+            "id": "flappy-bird",
+            "name": "Flappy Bird",
+            "subtitle": "Flappy Bird clone.",
+            "description": "Flappy Bird game built using React Native Skia.",
+            "longDescription": "Flappy Bird game built using React Native Skia.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/rn-bird-logo-BcYa_IFc.png",
+            "category": [
+                "Game"
+            ],
+            "platform": "React Native",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan/RNflappyBird",
+            "screenshots": [
+                "https://github.com/kagantemizkan/RNflappyBird/assets/46727689/1479894d-02eb-4f84-9851-3f3758e41d38",
+                "https://github.com/kagantemizkan/RNflappyBird/assets/46727689/75a7d35b-e761-421c-8f0e-6f8012dbc0eb"
+            ]
+        },
+        {
+            "id": "my-plants",
+            "name": "My Plants",
+            "subtitle": "Auto plant watering app.",
+            "description": "IoT connected plant watering system.",
+            "longDescription": "IoT connected plant watering system.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/my-plants-logo-D0tKCCTG.png",
+            "category": [
+                "Lifestyle"
+            ],
+            "platform": "React Native",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan/MyPlants",
+            "screenshots": [
+                "https://my-store-six-ruby.vercel.app/assets/1-Bw-nLna7.png",
+                "https://my-store-six-ruby.vercel.app/assets/2-kprfAE0u.png",
+                "https://my-store-six-ruby.vercel.app/assets/3-BoIJnfW0.png",
+                "https://my-store-six-ruby.vercel.app/assets/4-Ccy-PuAq.png",
+                "https://my-store-six-ruby.vercel.app/assets/5-iZD9VylL.png"
+            ]
+        },
+        {
+            "id": "number-match",
+            "name": "Number Match",
+            "subtitle": "Number match game app.",
+            "description": "This is a simple number matching game in Python.",
+            "longDescription": "The goal of the game is to find adjacent numbers on the board and match them. The higher the value of the matched numbers, the more points the player wins.",
+            "icon": "https://my-store-six-ruby.vercel.app/assets/number-match-logo-_P-lTy4H.png",
+            "category": [
+                "Game"
+            ],
+            "platform": "Python",
+            "price": "Free",
+            "github": "https://github.com/kagantemizkan/python-number-matching",
+            "features": [
+                "Number Matching",
+                "Score Tracking",
+                "Colored Console"
+            ],
+            "screenshots": [
+                "https://github.com/kagantemizkan/python-number-matching/assets/46727689/99b298c0-f60a-4a91-9fb9-53910a315615",
+                "https://github.com/kagantemizkan/python-number-matching/assets/46727689/fe724e82-313b-4fbc-a356-cf53715b7e04",
+                "https://github.com/kagantemizkan/python-number-matching/assets/46727689/b05b74f2-76d5-403d-a330-39c8fa281b81",
+                "https://github.com/kagantemizkan/python-number-matching/assets/46727689/e34738d7-3300-42d4-a1d1-9e8030418e8f"
+            ]
         }
-    },
-    {
-        "id": "koumath",
-        "name": "KOUmath",
-        "description": "AI math solver.",
-        "detailedDescription": "Photomath-like AI math solver with camera recognition.",
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/koumath-logo-B8_Amk9_.png",
-        "videoUrl": "https://my-store-six-ruby.vercel.app/assets/koumath-video-GEiKtCo-.mov",
-        "baseTech": "React Native",
-        "technologies": [
-            "React Native",
-            "Expo",
-            "React Native Skia",
-            "Reanimated"
-        ],
-        "categories": [
-            "Education"
-        ],
-        "screenshots": [
-            { "url": "https://github.com/user-attachments/assets/63aa9796-cc61-4b10-a4ff-f4519be8227d" },
-            { "url": "https://github.com/user-attachments/assets/558de7c8-453a-43d6-ac28-97b505b05a68" },
-            { "url": "https://github.com/user-attachments/assets/7da6324d-93df-4a1e-9981-1b163a822d2a" },
-            { "url": "https://github.com/user-attachments/assets/bbe42fd7-b112-4c4a-ba68-993c930b486d" },
-            { "url": "https://github.com/user-attachments/assets/75e22cd7-424f-4417-942d-cf4bac0c0100" },
-            { "url": "https://github.com/user-attachments/assets/cad93ac0-90d9-4eb7-8ae8-8d988c39e1d1" },
-            { "url": "https://github.com/user-attachments/assets/11c664d9-3b50-4727-a657-291335df4987" }
-        ],
-        "links": {
-            "github": "https://github.com/kagantemizkan/koumath"
-        }
-    },
-    {
-        "id": "bilokma",
-        "name": "Bi'lokma",
-        "description": "Prevent food waste.",
-        "detailedDescription": "Application connecting bakeries with users for leftover food.",
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/bilokma-logo-Bi-cwh1s.png",
-        "baseTech": "React Native",
-        "technologies": [
-            "React Native",
-            "Expo",
-            "NativeWind"
-        ],
-        "categories": [
-            "Food"
-        ],
-        "screenshots": [
-            { "url": "https://github.com/kagantemizkan/bilokma/assets/46727689/19b46d3f-bea8-4b58-9fa3-13c6694ac2e9" },
-            { "url": "https://github.com/kagantemizkan/bilokma/assets/46727689/870df9bd-1348-4d96-9fdd-f8dd7f51d62b" },
-            { "url": "https://github.com/kagantemizkan/bilokma/assets/46727689/4bc2206c-9635-4a62-9b14-8600693e9de2" },
-            { "url": "https://github.com/kagantemizkan/bilokma/assets/46727689/ee586ca1-7720-41a4-8931-fc0b1de5e52a" },
-            { "url": "https://github.com/kagantemizkan/bilokma/assets/46727689/bbdf7467-6df4-48d0-8668-10bc38b5c8f4" },
-            { "url": "https://github.com/kagantemizkan/bilokma/assets/46727689/339ee989-4552-40ea-b99b-a5ff08b8b95a" },
-            { "url": "https://github.com/kagantemizkan/bilokma/assets/46727689/ec424808-429f-4bd7-9289-c06bb55247ce" },
-            { "url": "https://github.com/kagantemizkan/bilokma/assets/46727689/7747c1ad-5ab5-402b-af14-a7382762ab67" },
-            { "url": "https://github.com/kagantemizkan/bilokma/assets/46727689/c693a304-eafd-400f-9323-d418ac290fec" }
-        ],
-        "links": {
-            "github": "https://github.com/kagantemizkan/bilokma"
-        }
-    },
-    {
-        "id": "flight-ticket",
-        "name": "Flight Ticket",
-        "description": "Flight ticket booking app.",
-        "detailedDescription": "A basic flight ticket app that generates random tickets and removes them.",
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/flight-ticket-logo-CeBiooom.png",
-        "videoUrl": "https://my-store-six-ruby.vercel.app/assets/flight-app-video-CdgI09Vx.mp4",
-        "baseTech": "React Native",
-        "screenshots": [
-            { "url": "https://my-store-six-ruby.vercel.app/assets/S1-BEsuJBYQ.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/S2-g2QdLOx3.png" }
-        ],
-        "features": [
-            "<b>Smooth Animations:</b> Enhanced with Reanimated for a fluid user experience.",
-            "<b>Dynamic Ticket View:</b> Utilizes react-native-svg for an interactive ticket display."
-        ],
-        "technologies": [
-            "React Native",
-            "Expo",
-            "Gesture Handler",
-            "Reanimated",
-            "JavaScript"
-        ],
-        "categories": [
-            "Booking"
-        ],
-        "links": {
-            "github": "https://github.com/kagantemizkan/flightTicketApp"
-        }
-    },
-    {
-        "id": "wordle",
-        "name": "Wordle Game",
-        "description": "Word guessing game.",
-        "detailedDescription": "Word puzzle game built with React Native.",
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/word-game-logo-CEXOfg9W.png",
-        "baseTech": "React Native",
-        "technologies": [
-            "React Native",
-            "TypeScript",
-            "Reanimated",
-            "Gesture Handler",
-            "Expo"
-        ],
-        "categories": [
-            "Game"
-        ],
-        "screenshots": [
-            { "url": "https://my-store-six-ruby.vercel.app/assets/1-BFyt7Gyl.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/2-DZzqFlCk.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/4-3W888tTD.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/6-DTO4xI12.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/7-C0ienYWO.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/8-Dsj_FGrm.png" }
-        ],
-        "links": {
-            "github": "https://github.com/kagantemizkan/worldle"
-        }
-    },
-    {
-        "id": "flappy-bird",
-        "name": "Flappy Bird",
-        "description": "Flappy Bird clone.",
-        "detailedDescription": "Flappy Bird game built using React Native Skia.",
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/rn-bird-logo-BcYa_IFc.png",
-        "videoUrl": "https://github.com/kagantemizkan/RNflappyBird/assets/46727689/07ccfb07-f06b-432c-b083-02cca6d238d2",
-        "baseTech": "React Native",
-        "technologies": [
-            "React Native",
-            "React Native Skia",
-            "Reanimated"
-        ],
-        "categories": [
-            "Game"
-        ],
-        "screenshots": [
-            { "url": "https://github.com/kagantemizkan/RNflappyBird/assets/46727689/1479894d-02eb-4f84-9851-3f3758e41d38" },
-            { "url": "https://github.com/kagantemizkan/RNflappyBird/assets/46727689/75a7d35b-e761-421c-8f0e-6f8012dbc0eb" }
-        ],
-        "links": {
-            "github": "https://github.com/kagantemizkan/RNflappyBird"
-        }
-    },
-    {
-        "id": "my-plants",
-        "name": "My Plants",
-        "description": "Auto plant watering app.",
-        "detailedDescription": "IoT connected plant watering system.",
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/my-plants-logo-D0tKCCTG.png",
-        "baseTech": "React Native",
-        "technologies": [
-            "React Native",
-            "Expo",
-            "JavaScript"
-        ],
-        "categories": [
-            "Lifestyle"
-        ],
-        "screenshots": [
-            { "url": "https://my-store-six-ruby.vercel.app/assets/1-Bw-nLna7.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/2-kprfAE0u.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/3-BoIJnfW0.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/4-Ccy-PuAq.png" },
-            { "url": "https://my-store-six-ruby.vercel.app/assets/5-iZD9VylL.png" }
-        ],
-        "links": {
-            "github": "https://github.com/kagantemizkan/MyPlants"
-        }
-    },
-    {
-        "id": "number-match",
-        "name": "Number Match",
-        "description": "Number match game app.",
-        "detailedDescription": "This is a simple number matching game in Python. The goal of the game is to find adjacent numbers on the board and match them. The higher the value of the matched numbers, the more points the player wins.",
-        "logoUrl": "https://my-store-six-ruby.vercel.app/assets/number-match-logo-_P-lTy4H.png",
-        "baseTech": "Python",
-        "screenshots": [
-            { "url": "https://github.com/kagantemizkan/python-number-matching/assets/46727689/99b298c0-f60a-4a91-9fb9-53910a315615" },
-            { "url": "https://github.com/kagantemizkan/python-number-matching/assets/46727689/fe724e82-313b-4fbc-a356-cf53715b7e04" },
-            { "url": "https://github.com/kagantemizkan/python-number-matching/assets/46727689/b05b74f2-76d5-403d-a330-39c8fa281b81" },
-            { "url": "https://github.com/kagantemizkan/python-number-matching/assets/46727689/e34738d7-3300-42d4-a1d1-9e8030418e8f" }
-        ],
-        "features": [
-            "Number Matching",
-            "Score Tracking",
-            "Colored Console"
-        ],
-        "technologies": [
-            "Python"
-        ],
-        "categories": [
-            "Game"
-        ],
-        "links": {
-            "github": "https://github.com/kagantemizkan/python-number-matching"
-        }
-    }
-]
+    ]
+}
