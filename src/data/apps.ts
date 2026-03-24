@@ -201,6 +201,7 @@ export const apps: AppItem[] = [
     categories: ["SaaS"],
     links: {
       appStore: "https://apps.apple.com/tr/app/sail-atlas/id6748818673?l=tr",
+      playStore: "https://play.google.com/store/apps/details?id=com.sailatlas.customer&hl=en",
     },
   },
   {
@@ -239,6 +240,7 @@ export const apps: AppItem[] = [
     categories: ["SaaS"],
     links: {
       appStore: "https://apps.apple.com/us/app/atlas-operations-app/id6743802951",
+            playStore: "https://play.google.com/store/apps/details?id=com.sailatlas.operation&hl=en",
     },
   },
   {
