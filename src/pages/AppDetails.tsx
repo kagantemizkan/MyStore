@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { FiArrowLeft } from "react-icons/fi";
-import { FaApple, FaGithub } from "react-icons/fa";
+import { FaApple, FaGithub, FaGoogle } from "react-icons/fa";
 
 import Gallery, { type GalleryItem } from "@/components/Gallery";
 
@@ -78,6 +78,14 @@ export default function AppDetails() {
             <a href={app.links.appStore} target="_blank" rel="noopener noreferrer">
               <FaApple className="w-5 h-5 mr-2" />
               {t("viewOnAppStore")}
+            </a>
+          </Button>
+        )}
+                {app.links?.playStore && (
+          <Button asChild>
+            <a href={app.links.playStore} target="_blank" rel="noopener noreferrer">
+              <FaGoogle className="w-5 h-5 mr-2" />
+              {View on Play Store}
             </a>
           </Button>
         )}
